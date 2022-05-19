@@ -1,0 +1,47 @@
+웹표준 코딩 html 5 ver. DOCTYPE html
+
+html>head : childern
+head>html : parent parent
+
+head : ghost 성격을 부여
+meat name : 반응형 홈페이지
+
+{ select 
+id 두 가지 이름을 가질 수 없다.
+
+resset css 초기화
+
+상우하좌 순서로외우자
+
+[배열]
+{객체}
+함수, function()
+
+<선택자>
+
+sub : 자식 선택자 : A>B
+main : 후손 선택자 : !!!! section 생성 후 div class="name"
+
+인적형태 선택자
+형제 선택자
+속성 선택자
+
+display : none; (displady의 속성이 없다.)
+display : block; 나타나다.
+display : inline (속성없음)
+display : flex; (박스를 가로로 배치)
+
+
+position : 어디에
+position : static; (속성이 없음)
+position : relative; 기준이된다.
+position : absolute; 겹쳐놓는다. 좌표를 가진다.
+position : absolute; top, left, bottom, right
+기준이 없을 경우 body가 기준이다.
+
+position : fixed
+기준점이 없고viewoport 만 기준.
+
+margin: 0 auto; 박스를 가운데에 오게하는것
+
+float

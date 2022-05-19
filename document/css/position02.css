@@ -1,0 +1,67 @@
+body {
+    background: #333;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: -500px;
+    width: 500px;
+    /* 기준이 되는 사이즈의 100% 현재는 body */
+    /* vh :viewport-height */
+    height: 100vh;
+    background: #fff;
+    transition: 0.5s;
+}
+nav.on {
+    left: 0;
+}
+
+.mopen {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    background: #ddd;
+}
+.mopen span {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    height: 3px;
+    background: rgb(255, 133, 188);
+    transition: 0.5s;
+}
+
+.mopen span:nth-child(1) {
+    top: 5px;
+}
+
+/* 수치가없는 값들(ex.none값)은 중간값이 없어 부드럽게 작동하게 하지 못함 */
+.mopen.on span:nth-child(1) {
+    opacity: 0;
+}
+
+.mopen span:nth-child(2) {
+    top: 14px;
+}
+
+.mopen.on span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.mopen span:nth-child(3) {
+    top: 14px;
+}
+
+.mopen.on span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+.mopen span:nth-child(4) {
+    bottom: 5px;
+}
+
+.mopen.on span:nth-child(4) {
+    opacity: 0;
+}

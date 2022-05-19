@@ -1,0 +1,20 @@
+.popup {
+    /* 기준이 없는 상태이므로 body가 기준이 된다. */
+    position: absolute;
+    /* 기준을 popup으로 잡아주기 */
+    top: 50%;
+    left: 50%;
+    /* 자기자신을 움직이는 속성. 레이아웃을 깨지않는다.
+    두번쓰지않는다! 뒤에 쓴 값이 앞의 값을 덮어써버린다! */
+    transform: translate(-50%, -50%);
+    /* 상기 4개의 값은 외워두도록 한다.! */
+    width: 450px; height: 350px; background: red;
+    /* 수치를 꼭 써주도록한다! 0 빼고는. */
+
+}
+.popup button {
+    /* 기준을 popup button으로 잡아주기. */
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}

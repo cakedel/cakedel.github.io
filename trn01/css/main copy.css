@@ -1,0 +1,35 @@
+.content {
+    padding: 100px 0;
+}
+
+.content .container {
+    /* position>display>width>font> */
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.content .container figure {
+    flex: 1;
+    
+}
+
+.content img {
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+.content strong {
+    display: block;
+    /* 박스로 속성을 바꿔준다. */
+    font-weight: 17px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    /* strong은 박스가 아니고 inline이라 margin, padding을 먹지 않는다. */
+}
+.content p {
+    font-weight: 15px;
+    font-weight: 300;
+    line-height: 1.25;
+}

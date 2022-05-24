@@ -1,10 +1,9 @@
 $(function(){
 
-    $('.first_slider').slick({
+    $('.main_slider').slick({
         arrows: false,
         autoplay: true,
-        dots: true,
+        pauseOnHover: false,
+        // 대소문자 구분
     });
-
-})
-
+});

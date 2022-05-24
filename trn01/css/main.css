@@ -1,35 +1,176 @@
-.content {
-    padding: 100px 0;
+:root {
+    /* IE 호환 불가 */
+    --mc : #dc3545;
+    --gc : #ddd;
+    --wc : #f9f8fa;
+    --dc : #000;
+
 }
 
-.content .container {
-    /* position>display>width>font> */
+html {
+    font-size: 20px;
+}
+
+body {
+    font-size: 0.8rem;
+    /* html에서 만들어놓은 폰트사이즈의 배수 16px이 된다. */
+}
+
+.Wrap {}
+
+.top_banner {
+    border-top: 2px solid var(--mc);
+    border-bottom: 1px solid var(--gc);
+    /* 변수쓰는 법 var() */
+    font-size: 0.65rem;
+    line-height: 1.5rem;
+}
+.top_banner .container {
     display: flex;
+    justify-content: flex-end;
+    width: 60rem;
+    margin: 0 auto;
+}
+.top_banner li {
+    border-right: 1px solid var(--wc);
+    padding: 0 0.5rem;
+    /* a 영역은 평범하게 클릭할 수 있을 정도로 영역을 잡아준다. */
+}
+
+.header {
+    line-height: 5rem;
+}
+
+.header .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header h1 img {
+    width: 300px;
+}
+
+.header nav {
+    margin: 0 0 0 auto;
+}
+
+.header nav>ul {
+/* 메뉴가 다단으로 많이 생겼을때 편리하도록 nav>ul 부모자식관계를 명확하게 꺽쇠로 잡아둔다. */
+    display: flex;
+    gap: 2rem;
+}
+
+.header nav>ul a {
+    display: block;
+    font-size: 0.85rem;
+}
+
+.header nav>ul>li {
+    position: relative;
+}
+
+.header nav>ul>li~li::before {
+    /* ~:자기자신을 뺀 형제들 모두에 */
+    content: "";
+    position: absolute;
+    inset: 50% auto auto -1rem;
+    width: 1px;
+    height: 0.6rem;
+    background: var(--gc);
+    transform: translateY(-50%);
+    
+}
+
+.header i {
+    font-size: 1.25rem;
+    /* icon에는 font weight(두께)를 주지 않는다! */
+    padding: 0.25rem;
+    background: var(--gc);
+    border-radius: 3px;
+    margin: 0 0 0 1rem;
+    vertical-align: middle;
+    /* 주의!!!! */
+}
+.main_visual {
+    position: relative;
+}
+.main_visual .main_slider img {
+    width: 100%;
+}
+.main_visual .slogan {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    text-align: right;
+    color: var(--wc);
+    text-shadow: 0 0 2px var(--dc) ;
+}
+
+.main_visual .slogan h2 {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 2rem 0;
+    text-shadow: 0 0 2px var(--dc) ;
+}
+
+.main_visual .slogan h2::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 2px;
+    background: var(--wc);
+    margin : 1rem 0 0 auto;
+}
+
+.main_visual .slogan p {
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.content02 {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--gc);
+
+    
+}
+
+.content02 .container_02 {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;    
+    gap: 30px;
+}
+
+.content02 .container_02 img {
+    width: 100%;
+}
+
+.container_02 strong {
+    display: block;
+    padding: 1rem 0;
+    font-weight: 500;
+    margin: 0 0 0.4rem 0;
+}
+.container_02 p {
+    line-height: 1.25;
+    font-size: 0.65rem;
+}
+.content03 {
+    padding: 5rem;
+}
+
+.content03 .container_03 {
+    display: flex;
+    flex: 1;
     gap: 30px;
     width: 1200px;
     margin: 0 auto;
 }
 
-.content .container figure {
-    flex: 1;
-    
-}
-
-.content img {
+.content03 .container_03 img {
     width: 100%;
-    margin: 0 0 20px 0;
-}
-
-.content strong {
-    display: block;
-    /* 박스로 속성을 바꿔준다. */
-    font-weight: 17px;
-    font-weight: 700;
-    margin: 0 0 10px 0;
-    /* strong은 박스가 아니고 inline이라 margin, padding을 먹지 않는다. */
-}
-.content p {
-    font-weight: 15px;
-    font-weight: 300;
-    line-height: 1.25;
 }

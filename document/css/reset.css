@@ -15,5 +15,5 @@ body{
 
 img {
     vertical-align: middle;
-    
+    /* 이미지 사이의 공간을 없애준다! */
 }

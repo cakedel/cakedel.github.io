@@ -2,6 +2,9 @@ h1 {
     line-height: 100px;
     background: #f00;
 }
+h2 {
+    line-height: 50px;
+}
 nav {
     line-height: 100px;
     background: #00f;
@@ -10,6 +13,7 @@ nav {
     line-height: 100px;
     background: #ff0;
 }
+
 .header01 {
     display:flex;
 }
@@ -48,4 +52,8 @@ nav {
 }
 .basic .icon {
     margin: 0 0 0 30px;
+}
+.header00 {
+    text-align: center;
+    margin: auto;
 }

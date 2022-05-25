@@ -39,7 +39,7 @@ body{
 .menu ul li::after {
     content: "";
     display: inline-block;
-    /* block이 아니다. */
+    /* box & block */
     width: 1px;
     height: 14px;
     background: rgb(169, 169, 169);

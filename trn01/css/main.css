@@ -7,13 +7,14 @@
 
 }
 
+
 html {
     font-size: 20px;
 }
 
 body {
     font-size: 0.8rem;
-    /* html에서 만들어놓은 폰트사이즈의 배수 16px이 된다. */
+    /* html에서 만들어놓은 폰트사이즈 20의 배수 16px이 된다. */
 }
 
 .Wrap {}
@@ -95,6 +96,17 @@ body {
 .main_visual {
     position: relative;
 }
+
+.main_visual::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/pt-bg01.png);
+}
+
 .main_visual .main_slider img {
     width: 100%;
 }
@@ -106,6 +118,7 @@ body {
     text-align: right;
     color: var(--wc);
     text-shadow: 0 0 2px var(--dc) ;
+    z-index: 999;
 }
 
 .main_visual .slogan h2 {
@@ -131,46 +144,190 @@ body {
     line-height: 1;
 }
 
-.content02 {
-    padding: 5rem 0;
-    border-bottom: 1px solid var(--gc);
+.main_visual figure {
+    height: 30rem;
+}
 
+.main_visual .item01 {
+    background: url(../img/main_bg01.jpg) no-repeat center center/100%;
+}
+
+.main_visual .item01.on {
+    background: url(../img/main_bg01.jpg) no-repeat center center/150%;
+    transition: 2s;
+}
+
+.main_visual .item02 {
+    background: url(../img/main_bg02.jpg) no-repeat center center/100%;
+}
+
+.main_visual .item02.on {
+    background: url(../img/main_bg02.jpg) no-repeat center center/150%;
+    transition: 2s;
+}
+
+.main_visual .item03 {
+    background: url(../img/main_bg03.jpg) no-repeat center center/100%;
+}
+
+.main_visual .item03.on {
+    background: url(../img/main_bg03.jpg) no-repeat center center/150%;
+    transition: 2s;
+}
+
+.content {
+    padding: 100px 0;
+}
+
+.content .container {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.content figure {
+    flex: 1;
+    overflow: hidden;
+}
+
+.content figure .box {
+    overflow: hidden;
+    margin: 0 0 20px 0;
     
 }
 
-.content02 .container_02 {
-    display: flex;
-    width: 1200px;
-    margin: 0 auto;    
-    gap: 30px;
+.content figure img {
+    transition: 0.5s;
 }
 
-.content02 .container_02 img {
-    width: 100%;
+.content figure:hover img {
+    transform: scale(1.5);
 }
 
-.container_02 strong {
+.content strong {
     display: block;
-    padding: 1rem 0;
+    font-size: 17px;
     font-weight: 500;
-    margin: 0 0 0.4rem 0;
-}
-.container_02 p {
-    line-height: 1.25;
-    font-size: 0.65rem;
-}
-.content03 {
-    padding: 5rem;
+    margin: 0 0 17px 0;
 }
 
-.content03 .container_03 {
+.content p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.product  {
+    padding: 30px 0;
+    border-top: 1px solid var(--gc);
+}
+
+.product .container {
     display: flex;
-    flex: 1;
     gap: 30px;
     width: 1200px;
     margin: 0 auto;
 }
 
-.content03 .container_03 img {
-    width: 100%;
+.product .container .left {
+    flex: 2;
+}
+
+.product .container .right {
+    flex: 1;
+    line-height: 1.4;
+    border-left: 1px solid var(--gc);
+    padding: 15px 0 0 30px;
+}
+
+.product .container .left ul {
+    display: flex;
+    gap: 10px;
+}
+
+.product .tel {
+    border-bottom: 1px solid var(--mc);
+    margin: 0 0 15px 0;
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 2;
+}
+
+.customer {
+    display: flex;
+}
+.customer>div {
+    flex: 1;
+}
+
+.customer .left {
+    text-align: right;
+    background: url(../img/main_banner01.jpg) no-repeat center center/cover;
+}
+.customer .right {
+    background: url(../img/main_banner02.jpg) no-repeat center center/cover;
+    border-left: 1px solid rgba(0, 0, 0, 0 0.3);
+}
+
+.customer>div a {
+    display: block;
+    color: #fff;
+    padding: 50px 40px;
+    text-shadow: 0 0 3 var(--dc);
+    background: url(../img/pt-bg01.png);
+    /* 이미지 원본의 퀄리티가 좋지 못할때 패턴을 깔기도 */
+}
+
+.customer>div a h3 {
+    font-size: 31px;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+}
+.customer>div a p {
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.footer {
+    padding: 30px 0 50px 0;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.footer .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .logo {
+    flex: 1;
+}
+
+.footer address {
+    flex: 5;
+}
+
+.footer address {
+    flex: 4;
+    font-style: normal;
+    padding: 15px 0 0 0;
+}
+
+.footer address ul {
+    margin: 0 0 10px 0;
+}
+
+.footer address ul li {
+    display: inline-block;
+}
+
+.footer address ul li~li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background: var(--gc);
+    margin: 0 7px;
 }

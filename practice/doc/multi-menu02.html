@@ -24,26 +24,82 @@
         text-decoration: none;
     }
 
-    header {
-        line-height: 100px;
-    }
+    /* 다단메뉴 */
 
-    body {
+    .header {
+        line-height: 100px;
         background: #ddd;
     }
 
-    .container {
+    .header .container {
         display: flex;
         width: 1200px;
-        height: 100px;
         margin: 0 auto;
-        justify-content: space-between;
+    }
+
+    nav {
+        margin: 0 0 0 auto;
+        text-align: center;
     }
 
     nav>ul {
+        display: flex;
+    }
+
+    nav>ul>li>a {
+        display: block;
+        /* anchor가 inline 태그이기 때문에 block을 먹여줘야 상하 padding이 먹는다. */
+        padding: 0 40px;
+    }
+
+    nav>ul ul a {
+        display: block;
+        line-height: 40px;
+    }
+
+    nav>ul>li {
         position: relative;
     }
 
+    nav>ul>li>ul {
+        position: absolute;
+        inset: 90px auto auto 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        background: #fff;
+        display: none;
+        z-index: 999;
+        border: 1px solid #333;
+        
+    }
+
+    nav>ul>li:hover ul {
+        display: block;
+    }
+
+    nav>ul>li>ul a {
+        border-bottom: 1px solid #ddd;
+    }
+    nav>ul>li {
+        position: relative;
+    }
+
+    nav>ul>li>ul li {
+        position: relative;
+        /* 다시 복습해둘것 */
+        background: #fff;
+    }
+    nav>ul>li>ul::before {
+        content: "";
+        display: block;
+        inset: -10px auto auto 50%;
+        transform: translateX(-50%) rotate(45deg);
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border: 1px solid #333;
+    }
     .main_visual {
         height: 500px;
         background: #333;
@@ -52,7 +108,7 @@
 
 <body>
     <div class="Wrap">
-        <header>
+        <header class="header">
             <div class="container">
                 <h1>LOGO</h1>
                 <nav>
@@ -67,25 +123,30 @@
                             </ul>
                         </li>
                         <li><a href="">MENU02</a>
-                        <li><a href="">smenu01</a></li>
-                        <li><a href="">smenu02</a></li>
-                        <li><a href="">smenu03</a></li>
-                        <li><a href="">smenu04</a></li>
-                        <li><a href="">smenu05</a></li>
-                        </li>
+                            <ul>
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                                <li><a href="">smenu05</a></li>
+                            </ul>
                         <li><a href="">MENU03</a>
-                        <li><a href="">smenu01</a></li>
-                        <li><a href="">smenu02</a></li>
-                        <li><a href="">smenu03</a></li>
-                        <li><a href="">smenu04</a></li>
-                        <li><a href="">smenu05</a></li>
+                            <ul>
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                                <li><a href="">smenu05</a></li>
+                            </ul>
                         </li>
                         <li><a href="">MENU04</a>
-                        <li><a href="">smenu01</a></li>
-                        <li><a href="">smenu02</a></li>
-                        <li><a href="">smenu03</a></li>
-                        <li><a href="">smenu04</a></li>
-                        <li><a href="">smenu05</a></li>
+                            <ul>
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                                <li><a href="">smenu05</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>

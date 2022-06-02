@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX</title>
+    <style>
+        /* 기본적인 리셋 */
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing을 해주지 않으면 border와 padding을 먹어 넘쳐나는 현상 발생 */
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        div {
+            width: 1200px;
+            margin: 50px;
+        }
+
+
+        div>div {
+            background: #ddd;
+        }
+
+        div:nth-child(2) {
+            padding: 0 100px;
+        }
+
+        div:nth-child(3) {
+            padding: 0 100px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div><a href="">BOX01</a></div>
+        <div><a href="">BOX02</a></div>
+        <p>paddig을 먹어 튀어나온 상황</p>
+        <div><a href="">BOX03</a></div>
+        <p>box-sizing:border-box</p>
+        <p>block의 안쪽으로 padding과 border를 가둔 상황</p>
+        <div><a href="">BOX04</a></div>
+        <div><a href="">BOX05</a></div>
+        <div><a href="">BOX06</a></div>
+        <div><a href="">BOX07</a></div>
+    </div>
+</body>
+
+</html>

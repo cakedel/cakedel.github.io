@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display review</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* inline 요소는 width, height, {상하 margin, 상하padding} 값을 먹지 않는다. */
+    .inline span {
+        width: 100px;
+        height: 100px;
+        background: rgba(0, 255, 0, 0.3);
+        color: #333;
+        margin: 20px 20px;
+        padding: 20px 20px;
+    }
+
+    .inlineToBlock span {
+        display: block;
+        /* inline tag에 block 먹이기 */
+        width: 100px;
+        height: 100px;
+        padding: 30px 0;
+        margin: 30px 0;
+        background: rgba(0, 0, 255, 0.3);
+        color: #fff;
+    }
+
+    .inlineToInlnineblock span {
+        display: inline-block;
+        /* 박스를 가로로 배열하지만 gap을 가진다 */
+        text-align: center;
+        font-size: 20px;
+        width: 100px;
+        height: 100px;
+        padding: 30px 0;
+        margin: 30px 0;
+        background: rgba(0, 0, 255, 0.3);
+        color: #fff;
+    }
+
+    .inlineToInlnineblock {
+        font-size: 0;
+        text-align: center;
+        /* inline의 부모에 text-align:center를 줌으로써 박스를 중앙에 배치할 수 있다. */
+    }
+
+    /* 부모요소에 font-size:0을 주지 않았지만 html상에서 tag가 붙어있기 때문에 gap이 없는 것을 알 수 있다. */
+    /* block 속성도 있지만 inline 속성도 가지기 때문에 Enter를 하나의 gap으로 인식한다. */
+    .inlineToInlnineblock02 span {
+        display: inline-block;
+        text-align: center;
+        font-size: 20px;
+        width: 100px;
+        height: 100px;
+        padding: 30px 0;
+        margin: 30px 0;
+        background: rgba(0, 0, 255, 0.3);
+        color: #fff;
+    }
+
+    .blockToInline {
+        background: #ddd;
+    /* inline 값에만 배경이 먹는다! */
+    }
+
+    .blockToInline div {
+        display: inline;
+/* block 속성을 inline으로 바꿨을 때 */
+        text-align: center;
+        font-size: 20px;
+        width: 100px;
+        height: 100px;
+        padding: 30px 0;
+        margin: 30px 0;
+        background: rgba(0, 0, 255, 0.3);
+        color: #fff;
+    }
+</style>
+
+<body>
+    <section class="inline">
+        <span>span01</span>
+        <span>span02</span>
+        <span>span03</span>
+        <span>span04</span>
+        <span>span05</span>
+        <br>
+        <span>span01</span>
+        <span>span02</span>
+        <span>span03</span>
+        <span>span04</span>
+        <span>span05</span>
+        <!-- 실제 padding 값이 먹지 않았기에 겹쳐져 있음. -->
+    </section>
+    <section class="inlineToBlock">
+        <span>span01</span><span>span02</span><span>span03</span><span>span04</span><span>span05</span>
+    </section>
+    <section class="inlineToInlnineblock">
+        <span>span01</span>
+        <span>span02</span>
+        <span>span03</span>
+        <span>span04</span>
+        <span>span05</span>
+    </section>
+    <section class="inlineToInlnineblock02">
+        <span>span01</span><span>span02</span><span>span03</span><span>span04</span><span>span05</span>
+    </section>
+
+    <section class="blockToInline">
+        <div>span01</div>
+        <div>span02</div>
+        <div>span03</div>
+        <div>span04</div>
+        <div>span05</div>
+    </section>
+</body>
+
+</html>

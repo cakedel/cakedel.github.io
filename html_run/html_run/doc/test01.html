@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다단메뉴</title>
+    <style>
+        /* 간단한 리셋 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        #header {
+            position: relative;
+            line-height: 100px;
+        }
+
+        .container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+
+        nav>ul {
+            display: flex;
+            gap: 120px;
+            text-align: center;
+        }
+
+        nav>ul::before {
+            content: "";
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: rgb(255, 185, 185);
+            z-index: 999;
+            transition: 0.5s;
+        }
+
+        nav>ul:hover::before {
+            height: 210px;
+        }
+
+        nav>ul>li {
+            position: relative;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        nav>ul>li:hover ul {
+            height: 210px;
+        }
+
+        nav>ul>li:hover ul {
+            height: 210px;
+        }
+        nav a {
+            height: 0;
+        }
+        nav:hover a {
+            height: 210px;
+        }
+
+        nav>ul ul {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            background: rgb(255, 185, 185);
+            z-index: 999;
+            width: 150px;
+            line-height: 40px;
+            transform: translateX(-30%);
+        }
+
+        .main_visual {
+            /* position이 반복될 때 depth에 상관없이 나중에 작성된 position이 앞의 것을 덮어쓴다. */
+            position: relative;
+            height: 500px;
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        wrap-container : kebob case;
+        Wrap : pascal case;
+        wrap_container : snake case;
+        wrapContainer : camel case;
+        Wrap_containrt-inner: BEM;
+    -->
+    <div class="wrap">
+        <header id="header">
+            <div class="container">
+                <h1>LOGO</h1>
+                <nav>
+                    <ul>
+                        <li><a href="">menu01</a>
+                            <ul>
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                                <li><a href="">smenu05</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">menu02</a>
+                            <ul>
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                                <li><a href="">smenu05</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">menu03</a>
+                            <ul>
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                                <li><a href="">smenu05</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">menu04</a>
+                            <ul>
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                                <li><a href="">smenu05</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="main_visual">
+
+            </div>
+        </main>
+        <footer>
+            &copy;peony
+        </footer>
+    </div>
+</body>
+
+</html>

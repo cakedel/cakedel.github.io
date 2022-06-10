@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다단메뉴 - 가로배치</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/basic01.css">
+    <style>
+        /* git repository */
+        /* git experiment */
+        /* gitgitgit */
+        /* githubhub */
+        .header {
+            line-height: 100px;
+        }
+
+        .header .container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+            /* border-bottom: 5px solid rgb(255, 31, 31); */
+
+        }
+
+        .header .gnb {
+            margin: 0 0 0 auto;
+        }
+
+        .header .gnb>ul {
+            /* 메뉴 선택할 때는 자식 선택자를 잡을 것! */
+            display: flex;
+            /* gap: 50px; */
+        }
+
+        .header .gnb>ul>li {
+            position: relative;
+        }
+
+        .header .gnb>ul>li a {
+            display: block;
+            padding: 0 25px;
+            /* box 속성을 만들고 padding을 줘서 클릭 범위를 넓힌다. */
+        }
+
+        .header .gnb>ul ul {
+            display: none;
+            position: absolute;
+            top: 100px;
+            /* 부모의 line-height 만큼 준다. */
+            left: 50%;
+            width: 150px;
+            z-index: 999;
+            line-height: 40px;
+            transform: translateX(-50%);
+            text-align: center;
+            background: rgb(255, 219, 234);
+        }
+
+        .header .gnb>ul>li:hover ul {
+            display: block;
+        }
+
+        .mbtn {
+            display: none;
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            font-size: 30px;
+            background: #f7f7f7;
+            padding: 5px;
+            line-height: 1;
+        }
+
+        @media (max-width:768px) {
+            .header {
+                line-height: 100px;
+            }
+
+            .header .container {
+                display: flex;
+                width: auto;
+                /* border-bottom: 5px solid rgb(255, 31, 31); */
+
+            }
+
+            .header h1 {
+                /* width: 100vh;
+                text-align: center; */
+                margin: 0 auto;
+            }
+
+            .header .gnb {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                z-index: 999;
+                /* 부모의 z-index를 넘어갈 수 없다. */
+                width: calc(100% - 90px);
+                height: 100vh;
+                /* viewport height */
+                background: #fff;
+                margin: 0 0 0 auto;
+                transition: 0.5s;
+            }
+
+            .header .gnb.on {
+                left: 0;
+            }
+
+            .header .gnb>ul {
+                /* 메뉴 선택할 때는 자식 선택자를 잡을 것! */
+                display: flex;
+                flex-direction: column;
+                line-height: 40px;
+            }
+
+            .header .gnb>ul>li {
+                position: relative;
+            }
+
+            .header .gnb>ul>li a {
+                display: block;
+                padding: 0 25px;
+                /* box 속성을 만들고 padding을 줘서 클릭 범위를 넓힌다. */
+            }
+
+            .header .gnb>ul ul {
+                display: none;
+                position: static;
+                top: 100px;
+                /* 부모의 line-height 만큼 준다. */
+                left: 50%;
+                width: auto;
+                z-index: 999;
+                line-height: 40px;
+                transform: translateX(0);
+                text-align: center;
+                background: rgb(255, 219, 234);
+            }
+
+            .header .gnb>ul>li:hover ul {
+                display: none;
+            }
+
+            .mbtn {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Wrap">
+        <header class="header">
+            <div class="container">
+                <h1>
+                    <a href="/">
+                        <img src="../img/logo.png" alt="">
+                    </a>
+                    <!-- 경로 / : root, index -->
+                    <!-- 경로 ./ : 형제레벨의 경로, 생략이 가능 -->
+                    <!-- 경로 ../ : 부모레벨의 경로 -->
+                </h1>
+                <nav class="gnb">
+                    <!-- global navigation bar -->
+                    <!-- local navigation bar -->
+                    <ul>
+                        <li>
+                            <a href="">MENU01</a>
+                            <ul>
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">MENU02</a>
+                            <ul>
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">MENU03</a>
+                            <ul>
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">MENU04</a>
+                            <ul>
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">MENU05</a>
+                            <ul>
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">MENU06</a>
+                            <ul>
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mbtn">
+                    <i class="xi-bars"></i>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="main_visaul">
+
+            </div>
+        </main>
+        <footer class="footer">
+            &copy basic template. <a href="#!">link</a>
+            <!-- #+! 이벤트를 없앤다. 자바에서 주의. -->
+        </footer>
+    </div>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $('.gnb>ul>li>a').on('click', function (e) {
+                if ($('.mbtn').css('display') == 'block') {
+                    e.preventDefault();
+                    //$('.gnb>ul>li>a').next().hide();
+                    $(this).next().stop().slideToggle();
+                    $(this).parent().siblings().children('ul').stop().slideUp();
+                }
+                else {
+                }
+            })
+            $('.mbtn').on('click', function () {
+                $('.gnb').toggleClass('on');
+                $('.gnb>ul>li>a').next().stop().slideUp();
+            });
+        });
+    </script>
+</body>
+
+</html>

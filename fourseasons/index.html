@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四季</title>
+    <link rel="stylesheet" href="./css/fourseasons.css">
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+
+<body>
+    <div class="Wrap">
+        <header class="header">
+            <div class="container">
+                <h1>
+                    <i class="xi-crescent"></i>
+                    <a href="">Four seasons</a>
+                </h1>
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a href="" target=>Spring & Fall</a>
+                            <a href="" target=>Winter & Summer</a>
+                        </li>
+                    </ul>
+                </nav> 
+            </div>
+            <div class="mbtn">
+                <i class="xi-bars"></i>
+            </div>
+        </header>
+        <section id="event">
+            <h2>四季</h2>
+            <p>Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptates ullam nobis placeat? Ut, corrupti.</p>
+            <div class="container">
+                <figure>
+                    <div class="spring">spring
+                        <img src="./img/ground_berry.jpg" alt="" class="spring">
+                        <a href="#!">spring</a>
+                    </div>
+                </figure>
+                <figure>
+                    <div class="fall">fall
+                        <img src="./img/clover.jpg" alt="" class="fall">
+                        <a href="#!">fall</a>
+                    </div>
+                </figure>
+                <figure>
+                    <div class="winter">winter
+                        <img src="./img/magic_lily.jpg" alt="" class="winter">
+
+                        <a href="#!">winter</a>
+                    </div>
+                </figure>
+                <figure>
+                    <div class="summer">summer
+                        <img src="./img/blue_peony.jpg" alt="" class="summer">
+                        <a href="#!">summer</a>
+                    </div>
+                </figure>
+            </div>
+
+        </section>
+    </div>
+    <footer class="footer">
+        &copy doyo
+    </footer>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $('.mbtn').on('click', function () {
+                $('.header ul>li').toggleClass('on')
+            })
+        });
+    </script>
+</body>
+
+</html>

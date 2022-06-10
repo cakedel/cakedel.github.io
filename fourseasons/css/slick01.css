@@ -1,0 +1,17 @@
+.main_visual .main_slider figure {
+    position: relative;
+    height: 600px;
+    width: 600px;
+}
+
+.main_visual .main_slider .item01 {
+    background: url(../img/liam.png) no-repeat center center/cover;
+}
+
+.main_visual .main_slider .item02 {
+    background: url(../img/cain.png) no-repeat center center/cover;
+}
+
+.main_visual .main_slider .item03 {
+    background: url(../img/abel.png) no-repeat center center/cover;
+}

@@ -216,7 +216,7 @@ body {
 @media (max-width:768px) {
 
     .header .container {
-        width: 100vw;
+        width: auto;
         line-height: 70px;
         position: relative;
         display: flex;
@@ -225,9 +225,9 @@ body {
     }
 
     .header h1 {
-        /* width: 768px; */
+        width: 100vw;
         margin: 0 auto;
-        align-items: center;
+        text-align: center;
     }
 
     .header ul>li {
@@ -235,11 +235,11 @@ body {
         position: absolute;
         flex-direction: column;
         background: #fff;
-        width: 50vh;
+        width: 100vw;
         padding: 10px 10px;
         text-align: center;
         top: 0;
-        left: -100%;
+        left: -100vw;
         transition: 0.5s
     }
 
@@ -266,7 +266,6 @@ body {
 
     #event .container {
         position: relative;
-        margin: 0 0 0 auto;
         flex-direction: column;
         display: flex;
         width: auto;
@@ -274,9 +273,8 @@ body {
 
     }
 
-    #event .container figure {
-
-
+    #event {
+        height: 1000px;
     }
 
     #event figure {

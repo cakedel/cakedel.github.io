@@ -272,10 +272,8 @@ body {
     }
     #event .container figure {
         position: absolute;  
-        transform: translateX(15vw);
+        transform: translateX(25vw);
     }
-
-
 
     #event figure {
         width: 350px;

@@ -136,12 +136,11 @@ body {
 }
 
 #event figure {
-    width: 1200px;
-    height: 160px;
     padding: 70px;
     overflow: hidden;
     /* 부모에서 상속받은 값 1200px의 100% */
     transition: 0.5s;
+    flex: 1;
 }
 
 #event figure:nth-child(1) {
@@ -206,6 +205,7 @@ body {
     left: 0;
 
 }
+
 .footer {
     line-height: 30px;
     text-align: center;
@@ -216,7 +216,7 @@ body {
 @media (max-width:768px) {
 
     .header .container {
-        width: auto;
+        width: 100vw;
         line-height: 70px;
         position: relative;
         display: flex;
@@ -227,6 +227,7 @@ body {
     .header h1 {
         /* width: 768px; */
         margin: 0 auto;
+        align-items: center;
     }
 
     .header ul>li {
@@ -268,17 +269,19 @@ body {
         margin: 0 0 0 auto;
         flex-direction: column;
         display: flex;
+        width: auto;
+        padding: 0 15px;
 
     }
+
     #event .container figure {
-        position: absolute;  
-        transform: translateX(25vw);
+
+
     }
 
     #event figure {
-        width: 350px;
+
         height: 160px;
-        padding: 70px;
         overflow: hidden;
         /* 부모에서 상속받은 값 1200px의 100% */
         transition: 0.5s;

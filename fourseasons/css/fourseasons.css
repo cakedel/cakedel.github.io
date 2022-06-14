@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
 
-* {
-    /* border: 1px solid red; */
-}
-
 body {
     /* 가독성이 홀수일 때 좋다. */
     background: #f7f7f7;

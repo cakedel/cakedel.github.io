@@ -151,7 +151,7 @@ img {
 .elivator h2 {
     font-size: 30px;
     font-weight: 500;
-    margin: 0 0 30px 0;
+    margin: 20px 0 13px 0;
 }
 
 .elivator p {
@@ -163,7 +163,7 @@ img {
 .right_slider {
     width: 120%;
     margin: 20px 0 0 0;
-    height: 359px;
+    height: 400px;
 }
 
 .slide02 .container .right figure {
@@ -176,10 +176,6 @@ img {
     padding: 10px;
     border: 1px solid #fff;
     color: #fff;
-}
-
-.box .content {
-    /* position: relative; */
 }
 
 .box .content h3 {
@@ -197,10 +193,10 @@ img {
 
 .box .content a {
     position: absolute;
+    display: block;
     left: 50%;
     top: 60%;
     transform: translateX(-50%);
-    display: block;
     padding: 10px 15px;
     border: 1px solid #333;
 }

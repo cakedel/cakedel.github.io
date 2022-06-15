@@ -24,21 +24,21 @@ $(function () {
         var idx = $(this).parent().index();
 
         $('.main_slider').slick('slickGoTo', idx);
-        // $('.num').css({ backgroundPositionY: -100 * idx + "px" });
+        createNum = idx
     })
 
-    $('.custom_arrow i:nth-child(1)').on('click', function(){
+    $('.custom_arrow i:nth-child(1)').on('click', function () {
         $('.main_slider').slick('slickPrev');
     })
 
-    $('.custom_arrow i:nth-child(2)').on('click', function(){
+    $('.custom_arrow i:nth-child(2)').on('click', function () {
         $('.main_slider').slick('slickNext');
     })
-    $('.custom_play i:nth-child(1)').on('click', function(){
+    $('.custom_play i:nth-child(1)').on('click', function () {
         $('.main_slider').slick('slickPause');
     })
 
-    $('.custom_play i:nth-child(2)').on('click', function(){
+    $('.custom_play i:nth-child(2)').on('click', function () {
         $('.main_slider').slick('slickPlay');
     })
 });

@@ -8,7 +8,7 @@ $(function () {
         $('.num').css({ backgroundPositionY: -100 * createNum + "px" });
         $('.custom_dots li').eq(c).addClass('on').siblings().removeClass('on');
         createNum++
-        // createNum에 + 1 
+        // createNum에 + 1
     });
 
     $('.main_slider').slick({

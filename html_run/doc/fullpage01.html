@@ -215,9 +215,14 @@
                 $('#cover').toggleClass('on')
                 $('.cover_toggle').toggleClass('on')
             })
-            $('#cover a').on('click', function () {
-                // $('#cover').removeClass('on')
+            $('#cover').on('wheel scroll', function (e) {
+                e.stopPropagation();
             })
+            // #cover가 됐을 때 wheel click 이벤트를 막는다
+
+            // $('#cover a').on('click', function () {
+            //     // $('#cover').removeClass('on')
+            // })
 
         });    
     </script>

@@ -1,0 +1,243 @@
+.Wrap {}
+
+.container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* flex로 만들 container box */
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* flex가 없는 inner box */
+
+.topBanner {
+    padding: 30px 0;
+    background: #f1f1f1;
+    transition: 1s;
+}
+
+.topBanner .inner {
+    position: relative;
+}
+
+.topBanner h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.topBanner p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.topBanner a {
+    margin: 0 0 0 10px;
+    padding: 3px 15px 5px 15px;
+    /* padding이 들어간 것처럼 보일 뿐 영향이 없음 */
+    background: #333;
+    color: #fff;
+}
+
+.topBanner i {
+    position: absolute;
+    inset: 0 0 auto auto;
+    font-size: 21px;
+    padding: 5px;
+    background: #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* 2022.06.20 peony topBanner */
+
+#header {
+    line-height: 100px;
+    border-bottom: 1px solid #ddd;
+}
+
+#header .container {
+    justify-content: space-between;
+}
+
+#header nav>ul {
+    display: flex;
+}
+
+#header a {
+    padding: 3px 15px 5px 15px;
+
+}
+
+#header nav>ul>li~li::before {
+    /* 형제를 선택하기에 자기자신은 선택이 안됨 */
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 13px;
+    background: #ddd;
+}
+
+#serchForm input[type="text"] {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 5px 0;
+    color: #333;
+}
+
+#serchForm input[type="text"]::placeholder {
+    color: #f00;
+}
+
+#serchForm input[type="text"]:focus::placeholder {
+    opacity: 0;
+}
+
+#serchForm button {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 21px;
+}
+
+.mainVisual {
+    position: relative;
+}
+
+.mainVisual .mainSlider figure {
+    position: relative;
+    height: 600px;
+}
+
+.mainVisual .mainSlider figure h2 {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.mainVisual .mainSlider figure.on h2 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.mainVisual .mainSlider figure p {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.mainVisual .mainSlider figure.on p {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: 0.5s 0.5s;
+}
+
+.mainVisual .mainSlider figure a {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.mainVisual .mainSlider figure.on a {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 1.3s;
+}
+
+.mainVisual .itm01 {
+    background: url(../img/mainvisual01.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .itm02 {
+    background: url(../img/mainvisual02.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .itm03 {
+    background: url(../img/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .inner {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+}
+
+.mainVisual .inner h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.mainVisual .inner p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
+
+.mainVisual .inner a {
+    display: inline-block;
+    padding: 3px 20px 6px 20px;
+    background: #333;
+}
+
+.mainVisual .slick-dots {
+    gap: 5px;
+    position: absolute;
+    inset: auto auto 100px 50%;
+    transform: translateX(-50%);
+}
+
+.mainVisual .slick-dots li {
+    display: inline-block;
+}
+
+.mainVisual .slick-dots button {
+    border-radius: 50%;
+    border: none;
+    width: 22px;
+    height: 22px;
+    outline: none;
+    margin: 0 2px;
+}
+
+.mainVisual .slick-dots li.slick-active button {
+    background: #f00;
+    color: #fff;
+}
+
+.slideNum {
+    position: absolute;
+    inset: 50px auto auto 50%;
+    margin: 0 0 0 600px;
+    transform: translateX(-100%);
+    /* 자기자신만큼 이동해라 */
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    font-size: 41px;
+}
+
+.mainArrow i {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 100px;
+}
+
+.mainArrow i:nth-child(1) {
+    margin: 0 0 0 -700px
+}
+
+.mainArrow i:nth-child(2) {
+    margin: 0 0 0 700px;
+}
+
+.mainArrow i.on:nth-child(1) {
+    color: rgba(0, 0, 0, 0.5);
+}

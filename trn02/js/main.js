@@ -35,4 +35,11 @@ $(function () {
     $('.mainArrow i:nth-child(2)').on('click', function () {
         $('.mainSlider').slick('slickNext')
     })
+    $('.mainContent04 figure').on('mouseenter', function () {
+        $(this).toggleClass('on')
+    })
+    $('.mainContent04 figure').on('mouseleave', function () {
+        $(this).toggleClass('off')
+    })
+
 });

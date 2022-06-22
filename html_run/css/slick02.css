@@ -17,6 +17,7 @@ img {
 .main_slider .item03 {
     background: url(../img/maple-1079235.jpg) no-repeat center center/cover;
 }
+
 .main_slider .item04 {
     background: url(../img/winter.jpg) no-repeat center center/cover;
 }
@@ -53,10 +54,11 @@ img {
     background: rgb(10, 91, 91);
     opacity: 0;
 }
+
 .slider01 .slick-dots li.slick-active::after {
     opacity: 1;
     transition: 3s;
-}  
+}
 
 .slider01 .slick-dots li.slick-active {
     /* background: rgb(10, 91, 91); */

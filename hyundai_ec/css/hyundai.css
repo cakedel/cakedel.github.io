@@ -56,9 +56,17 @@
 }
 
 .slogan {
+    position: relative;
     padding: 100px 0;
     margin: 0 auto;
     text-align: center;
+}
+
+.slogan .sloganP {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
 }
 
 .slogan h2 {
@@ -76,7 +84,12 @@
 .slogan .slide figure {
     width: 1200px;
     height: 500px;
-    margin: 0 70px
+    margin: 0 35px;
+    filter: grayscale(0.5) brightness(150%) contrast(0.5);
+}
+
+.slogan .slide figure.slick-current {
+    filter: grayscale(0) brightness(1);
 }
 
 .slogan .itm01 {
@@ -89,4 +102,126 @@
 
 .slogan .itm03 {
     background: url(../img/slide03.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .inner {
+    position: relative;
+}
+
+.slogan .slick-arrow {
+    border: none;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 0;
+    padding: 35px 55px;
+    border-radius: 7px;
+}
+
+.slogan .slideArrows i {
+    position: absolute;
+    display: flex;
+    inset: calc(50% - 25px) auto auto 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+
+.slogan .slideArrows i:nth-child(1) {
+    margin: 0 0 0 -570px
+}
+
+.slogan .slideArrows i:nth-child(2) {
+    margin: 0 0 0 570px
+}
+
+.slogan .slide .slick-dots {
+    margin: 30px 0 0 0;
+}
+
+.slogan .slide .slick-dots li {
+    display: inline-block;
+    margin: 0 15px;
+    width: 20px;
+    height: 20px;
+    background: #ddd;
+}
+
+.slogan .slide .slick-dots li::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #444;
+    opacity: 0;
+}
+
+.slogan .slide .slick-dots li.slick-active::after {
+    opacity: 1;
+    transition: 3s;
+}
+
+.slogan .slide .slick-dots button {
+    display: none;
+}
+
+.business {
+    padding: 0 0 100px 0;
+}
+
+.business .container {
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+    gap: 30px;
+    text-align: center;
+
+}
+
+.business .container .const {
+    padding: 75px 0;
+    width: 380px;
+    color: #fff;
+}
+
+.business .container .const:nth-child(1) {
+    background: #057c2d;
+}
+
+.business .container .const:nth-child(2) {
+    background: #00953b;
+}
+
+.business .container .const:nth-child(3) {
+    background: #01a251;
+}
+
+.business .const h2 {
+    font-size: 27px;
+    font-weight: 500;
+    margin: 0 0 25px 0;
+}
+
+.business .const p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 50px 0;
+}
+
+.business .const figure {
+    width: 170px;
+    margin: 0 auto 70px auto;
+}
+
+.business .const a {
+    display: block;
+    line-height: 2.5;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.bridge {
+    background: url(../img/bridge01.jpg) no-repeat center center/cover;
+    height: 970px;
 }

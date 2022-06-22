@@ -19,7 +19,7 @@ body{
 }
 
 img {
-    /* max-width: 100%; */
+    max-width: 100%;
     vertical-align: middle;
     /* 이미지 사이의 공간을 없애준다! */
 }

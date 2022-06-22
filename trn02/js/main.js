@@ -41,5 +41,12 @@ $(function () {
     $('.mainContent04 figure').on('mouseleave', function () {
         $(this).toggleClass('off')
     })
-
+    // 2022.06.22
+    $('#youtube').YTPlayer({ videoURL: 'https://youtu.be/nmNqz74EOPE', containment: '.youtube', autoPlay: true, mute: true, startAt: 0, opacity: 1, showControls: false, playOnlyIfVisible: true, });
+    $('.youtube .zoom').on('click', function(e){
+        e.preventDefault();
+        // <!-- event 전파 방법을 막는 방법! -->
+        // <!-- e.preventDefault(); 자기가 가진 기본 이벤트를 없앤다. 
+        $('#youtube').YTPFullscreen()
+    })
 });

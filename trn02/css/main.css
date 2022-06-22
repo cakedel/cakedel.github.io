@@ -525,34 +525,80 @@
     border-radius: 50%;
     background: #333;
     vertical-align: middle;
+    filter: ;
     /* vertical-align: -20%; */
 }
 
-.fixedBg02 {
+.service {
     padding: 100px 0;
-    margin: 0 0 100vh 0;
-    text-align: center;
-    color: #fff;
-    background: url(../img/mainvisual01.jpg) no-repeat fixed center center/cover;
 }
 
-.fixedBg02 h2 {
+.service .container {
+    gap: 30px;
+}
+
+.service .container>div {
+    /* position: relative; */
+    flex: 1;
+    /* flex 박스들은 자동으로 widith가 비율에 맞춰 stetch 된다 */
+    /* padding-bottom: 56.25%; */
+}
+
+.service .container .case {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.service .container iframe {
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.service .container .root_daum_roughmap {
+    position: absolute;
+    inset: 0 0 0 0;
+    width: 100%;
+}
+
+.service .container .root_daum_roughmap .wrap_map {
+    height: 100%;
+}
+
+.youtube {
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    filter: grayscale(1);
+}
+
+.youtube h2 {
     margin: 0 0 10px 0;
     font-size: 19px;
     font-weight: 700;
 }
 
-.fixedBg02 p {
+.youtube p {
     margin: 0 0 30px 0;
     font-size: 15px;
     font-weight: 300;
 }
 
-.fixedBg02 i {
-    margin: auto auto auto 3px;
-    padding: 5px;
-    border-radius: 50%;
+.youtube i {
     background: #333;
-    vertical-align: middle;
-    /* vertical-align: -20%; */
+    border-radius: 50%;
+    padding: 5px;
+    vertical-align: 0;
+
+}
+
+.scrollMe {
+    padding: 200px 0;
+}
+
+.scrollMe .container {
+    gap: 70px;
+}
+
+.scrollMe .container figure {
+    flex: 1;
 }

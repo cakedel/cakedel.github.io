@@ -129,11 +129,11 @@
 }
 
 .slogan .slideArrows i:nth-child(1) {
-    margin: 0 0 0 -570px
+    margin: 0 0 0 -540px
 }
 
 .slogan .slideArrows i:nth-child(2) {
-    margin: 0 0 0 570px
+    margin: 0 0 0 540px
 }
 
 .slogan .slide .slick-dots {
@@ -143,9 +143,10 @@
 .slogan .slide .slick-dots li {
     display: inline-block;
     margin: 0 15px;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background: #ddd;
+    cursor: pointer;
 }
 
 .slogan .slide .slick-dots li::after {
@@ -222,6 +223,111 @@
 }
 
 .bridge {
+    position: relative;
     background: url(../img/bridge01.jpg) no-repeat center center/cover;
     height: 970px;
+}
+
+.bridge .container {
+
+    width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.bridge .container p {
+    padding: 225px 0 20px 0;
+    font-size: 36px;
+}
+
+.bridge .container strong {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.bridge .container .link {
+    position: absolute;
+    inset: auto auto 100px auto;
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    gap: 50px;
+    font-size: 18px;
+}
+
+.bridge .container a {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 15px 70px 20px 70px;
+}
+
+.bridge .container a::after {
+    content: "\e93f";
+    font-family: xeicon;
+    margin: 0 10px;
+
+}
+
+.news {
+    padding: 100px 0;
+}
+
+.news h2 {
+    margin: 0 0 30px 0;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.news .container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+.news .container figure {
+    width: 380px;
+    height: 435px;
+    margin: 0 15px;
+    border-bottom: 3px solid #ddd;
+}
+
+.news .container img {
+    margin: 0 0 25px 0;
+}
+
+.news .container i {
+    position: absolute;
+    inset: 35% auto auto 50%;
+    transform: translate(-50%, -50%);
+    color: #9f9f9f;
+    font-size: 72px;
+}
+
+.news .arrows i:nth-child(1) {
+    margin: auto auto auto -650px;
+}
+
+.news .arrows i:nth-child(2) {
+    margin: auto auto auto 650px;
+}
+
+.news .slider h3 {
+    color: #9f9f9f;
+    margin: 0 0 15px 0;
+    font-size: 14px;
+}
+
+.news .slider p {
+    font-size: 15px;
+    margin: 0 0 10px 0;
+}
+
+.news .slider strong {
+    display: block;
+    margin: 0 0 30px 0;
+    font-size: 14px;
+    font-weight: 300;
 }

@@ -15,4 +15,15 @@ $(function () {
     $('.slogan .slideArrows i:nth-child(2)').on('click', function () {
         $('.slide').slick('slickNext')
     })
-})
+    $('.news .slider').slick({
+        slidesToShow: 3,
+        arrows: false,
+    });
+
+    $('.news .arrows i:nth-child(1)').on('click', function () {
+        ('.news .slider').slick('slickPrev')
+    });
+    $('.news .arrows i:nth-child(2)').on('click', function () {
+        ('.news .slider').slick('slickNext')
+    });
+});

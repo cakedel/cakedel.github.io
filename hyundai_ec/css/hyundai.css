@@ -26,7 +26,12 @@
 
 }
 
-.container h2 img {
+.header .container .searchForm {
+    display: flex;
+    align-items: center;
+}
+
+.header .container h2 img {
     width: 230px;
 }
 
@@ -218,7 +223,7 @@
 .business .const a {
     display: block;
     line-height: 2.5;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 300;
 }
 
@@ -229,15 +234,14 @@
 }
 
 .bridge .container {
-
     width: 1200px;
     margin: 0 auto;
     color: #fff;
 }
 
 .bridge .container p {
-    padding: 225px 0 20px 0;
-    font-size: 36px;
+    padding: 170px 0 20px 0;
+    font-size: 35px;
 }
 
 .bridge .container strong {
@@ -247,7 +251,7 @@
 
 .bridge .container .link {
     position: absolute;
-    inset: auto auto 100px auto;
+    inset: auto auto 150px auto;
     width: 1200px;
     display: flex;
     margin: 0 auto;
@@ -273,8 +277,8 @@
 }
 
 .news h2 {
-    margin: 0 0 30px 0;
-    font-size: 36px;
+    margin: 0 0 50px 0;
+    font-size: 27px;
     font-weight: 500;
     text-align: center;
 
@@ -288,8 +292,6 @@
 }
 
 .news .container figure {
-    width: 380px;
-    height: 435px;
     margin: 0 15px;
     border-bottom: 3px solid #ddd;
 }
@@ -330,4 +332,36 @@
     margin: 0 0 30px 0;
     font-size: 14px;
     font-weight: 300;
+}
+
+.social {
+    padding: 0 0 100px 0;
+}
+
+.social h2 {
+    font-size: 27px;
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+
+.social .socialSlider {
+    margin: 0 auto;
+
+}
+
+.social .socialSlider figure {
+    padding: 0 15px;
+}
+
+.social .socialSlider img {
+    margin: 0 0 25px 0;
+}
+
+.social .socialSlider p {
+    font-size: 15px;
+    letter-spacing: -0.025em;
+}
+
+.social .socialSlider ul {
+    display: flex;
 }

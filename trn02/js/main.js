@@ -43,10 +43,52 @@ $(function () {
     })
     // 2022.06.22
     $('#youtube').YTPlayer({ videoURL: 'https://youtu.be/nmNqz74EOPE', containment: '.youtube', autoPlay: true, mute: true, startAt: 0, opacity: 1, showControls: false, playOnlyIfVisible: true, });
-    $('.youtube .zoom').on('click', function(e){
+    $('.youtube .zoom').on('click', function (e) {
         e.preventDefault();
         // <!-- event 전파 방법을 막는 방법! -->
         // <!-- e.preventDefault(); 자기가 가진 기본 이벤트를 없앤다. 
         $('#youtube').YTPFullscreen()
+    })
+    $('.productSlider').slick({
+        arrows: false,
+        dots: true,
+        slidesToShow: 5,
+        centerMode: true,
+    });
+    $('.product .productArrows i:nth-child(1)').on('click', function () {
+        $('.productSlider').slick('slickPrev')
+    });
+    $('.product .productArrows i:nth-child(2)').on('click', function () {
+        $('.productSlider').slick('slickNext')
+    });
+    $('.tabMenu li').on('click', function (event) {
+        event.preventDefault();
+        // console.log($(this), $(this).index(), event.target, event.currentTarget)
+        $('.tabMenu li').removeClass('on')
+        $(this).addClass('on');
+        var idx = $(this).index();
+        $('.tabContent>div').removeClass('on');
+        $('.tabContent>div').eq(idx).addClass('on');
+
+    })
+    var ux = '라멘';
+    $('.tabContent .notice li').on('click', function (event) {
+        event.preventDefault()
+        var idx = $(this).index();
+        $('.rightContent>li').removeClass('on')
+        $('.rightContent>li').eq(idx).addClass('on');
+    })
+    console.log(ux);
+    $('.toTop').on('click', function () {
+        $('html,body').animate({ scrollTop: 0 }, 200)
+        // 기본 400 = 0.4s ({변수}에 대한 값)
+    })
+    $(window).on('scroll', function () {
+        var sct = $(window).scrollTop();
+        if (sct > 500) {
+            $('.toTop').fadeIn(300)
+        } else {
+            $('.toTop').fadeOut(1000)
+        }
     })
 });

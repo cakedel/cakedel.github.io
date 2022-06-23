@@ -1,4 +1,16 @@
 $(function () {
+    $('.mainVideo').YTPlayer({
+        videoURL: 'https://youtu.be/89YJVY0Bcpo',
+        containment: '.mainVideo',
+        autoPlay: true,
+        startAt: 0,
+        loop: true,
+        mute: true,
+        showControls: false,
+        playOnlyIfVisible: true,
+        brightness: -400,
+
+    })
     $('.slogan .slide').slick({
         autoplay: true,
         autoplaySpeed: 4000,
@@ -26,11 +38,24 @@ $(function () {
         $('.slider').slick('slickNext')
     });
     $('.socialSlider').slick({
+        autoplay: true,
+        autoplaySpeed: 6000,
         arrows: false,
         dots: true,
         slidesToShow: 3,
         centerMode: true,
-        centerPadding: '380px',
+        centerPadding: '350px',
+    })
+    $('.toTop').on('click', function () {
+        $('html,body').animate({ scrollTop: 0 }, 200)
+    })
+    $(window).on('scroll', function () {
+        var sct = $(window).scrollTop();
+        if (sct > 800) {
+            $('.toTop').fadeIn(300)
+        } else {
+            $('.toTop').fadeOut(1000)
+        }
     })
 
 });

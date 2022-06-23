@@ -738,6 +738,8 @@
     flex: 1;
     background: #ddd;
     color: #333;
+    font-weight: 300;
+    letter-spacing: 5px;
 }
 
 .serviceTab .tabMenu li.on {
@@ -751,8 +753,15 @@
 
 .serviceTab .tabMenu li a {
     display: block;
-    padding: 5px 10px;
+    padding: 10px 15px;
     text-align: center;
+}
+
+.tabContent .notice li {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 2.5;
+    border-bottom: 1px solid #777;
 }
 
 .tabContent .notice a {
@@ -770,6 +779,40 @@
 
 .rightContent li {
     display: none;
+}
+
+.rightContent .inbox {
+    display: flex;
+    gap: 20px;
+}
+
+.rightContent .inbox .box {
+    flex: 1;
+}
+
+.rightContent .inbox .contents {
+    padding: 50px 0;
+}
+
+.rightContent .inbox .contents h2 {
+    margin: 0 0 10px 0;
+}
+
+.rightContent .inbox .contents p {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin: 0 0 30px 0;
+}
+
+.rightContent .inbox .contents a {
+    display: inline-block;
+    font-size: 14px;
+    /* font-weight: 300; */
+    /* letter-spacing: -0.025em; */
+    /* margin: 0 0 30px 0; */
+    padding: 3px 10px 5px 10px;
+    border: 1px solid #666;
 }
 
 .rightContent li.on {

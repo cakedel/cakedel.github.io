@@ -181,11 +181,11 @@
 }
 
 .slogan .slideArrows i:nth-child(1) {
-    margin: 0 0 0 -540px
+    margin: 0 0 0 calc(-600px + 60px);
 }
 
 .slogan .slideArrows i:nth-child(2) {
-    margin: 0 0 0 540px
+    margin: 0 0 0 calc(600px - 60px);
 }
 
 .slogan .slide .slick-dots {

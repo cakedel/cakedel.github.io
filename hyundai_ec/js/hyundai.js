@@ -19,7 +19,7 @@ $(function () {
         arrows: false,
         dots: true,
         centerMode: true,
-        centerPadding: '350px',
+        centerPadding: '300px',
     });
     $('.slogan .slideArrows i:nth-child(1)').on('click', function () {
         $('.slide').slick('slickPrev')

@@ -91,4 +91,11 @@ $(function () {
             $('.toTop').fadeOut(1000)
         }
     })
+    $('#fl').on('change', function () {
+        console.log($(this), $(this).val())
+        var link = $(this).val();
+        if (link) { window.open(link) }
+        // link && window.open(link)
+
+    })
 });

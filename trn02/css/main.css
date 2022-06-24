@@ -834,3 +834,58 @@
     border-radius: 50%;
     cursor: pointer;
 }
+
+#footer {
+    background: #333;
+    color: #fff;
+    line-height: 80px;
+    font-size: 15px;
+}
+
+#footer .top {
+    border-bottom: 1px solid #666;
+}
+
+#footer .top dd,
+#footer .top dt {
+    display: inline-block;
+}
+
+#footer .top dd~dd::before,
+#footer .top dt::before {
+    content: "";
+    display: inline-block;
+    margin: 0 15px;
+    width: 1px;
+    height: 10px;
+    background: #ddd;
+}
+
+#footer .top i {
+    font-size: 25px;
+}
+
+#footer .top dl a {}
+
+#footer .container {
+    justify-content: space-between;
+}
+
+#footer .bottom address {
+    font-style: normal;
+}
+
+#footer .bottom select {
+    font-size: 12px;
+    text-transform: uppercase;
+    background: transparent;
+    color: #ddd;
+    padding: 5px 15px;
+    border: 1px solid #666
+}
+
+#footer .bottom option {
+    color: #fff;
+    background: #333;
+    /* jquery ui */
+}

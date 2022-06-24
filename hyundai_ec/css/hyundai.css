@@ -86,7 +86,7 @@
 
 .mainVisual .mainVideo .container {
     position: absolute;
-    inset: 100px auto auto 50%;
+    inset: 30% auto auto 50%;
     transform: translateX(-50%);
     text-align: center;
     text-shadow: 0 0 3px #333;
@@ -97,7 +97,6 @@
 }
 
 .mainVisual .container h2 {
-    padding: 235px 0 0 0;
     margin: 0 0 30px 0;
     font-size: 42px;
     font-weight: 700;
@@ -289,7 +288,7 @@
 }
 
 .bridge .container p {
-    padding: 170px 0 20px 0;
+    padding: 200px 0 20px 0;
     font-size: 35px;
 }
 

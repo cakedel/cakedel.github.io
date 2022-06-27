@@ -19,7 +19,7 @@ $(function () {
         arrows: false,
         dots: true,
         centerMode: true,
-        centerPadding: '300px',
+        centerPadding: '16%'
     });
     $('.slogan .slideArrows i:nth-child(1)').on('click', function () {
         $('.slide').slick('slickPrev')
@@ -42,10 +42,22 @@ $(function () {
         autoplaySpeed: 6000,
         arrows: false,
         dots: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
         slidesToShow: 3,
+        slidesToScroll: 3,
         centerMode: true,
-        centerPadding: '350px',
+        centerPadding: '300px',
+        varialbeWidth: true,
+        infinite: true,
+
     })
+    $('.social .arrows i:nth-child(1)').on('click', function () {
+        $('.socialSlider').slick('slickPrev')
+    });
+    $('.social .arrows i:nth-child(2)').on('click', function () {
+        $('.socialSlider').slick('slickNext')
+    });
     $('.toTop').on('click', function () {
         $('html,body').animate({ scrollTop: 0 }, 200)
     })

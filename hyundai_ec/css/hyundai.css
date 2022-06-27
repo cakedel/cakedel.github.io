@@ -73,7 +73,6 @@
 
 .mainVisual {
     /* background: url(../img/mainVisual.jpg) no-repeat top center/cover; */
-
     text-align: right;
     color: #fff;
 }
@@ -133,10 +132,14 @@
     margin: 0 0 35px 0;
 }
 
+.slogan .slick-list {
+    width: 100%;
+}
+
 .slogan .slide figure {
     width: 1200px;
     height: 500px;
-    margin: 0 35px;
+    margin: 0 15px;
     filter: grayscale(0.5) brightness(150%) contrast(0.5);
 }
 
@@ -227,14 +230,14 @@
     display: flex;
     margin: 0 auto;
     width: 1200px;
-    gap: 30px;
     text-align: center;
 
 
 }
 
 .business .container .const {
-    padding: 75px 0;
+    flex: 1;
+    padding: 90px 0;
     width: 380px;
     color: #fff;
 }
@@ -248,13 +251,13 @@
 }
 
 .business .container .const:nth-child(3) {
-    background: #01a251;
+    background: #00c05f;
 }
 
 .business .const h2 {
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 500;
-    margin: 0 0 25px 0;
+    margin: 0 0 20px 0;
 }
 
 .business .const p {
@@ -264,14 +267,14 @@
 }
 
 .business .const figure {
-    width: 170px;
-    margin: 0 auto 70px auto;
+    width: 95px;
+    margin: 0 auto 40px auto;
 }
 
 .business .const a {
     display: block;
-    line-height: 2.5;
-    font-size: 17px;
+    line-height: 1.7;
+    font-size: 15px;
     font-weight: 300;
 }
 
@@ -288,7 +291,7 @@
 }
 
 .bridge .container p {
-    padding: 200px 0 20px 0;
+    padding: 170px 0 20px 0;
     font-size: 35px;
 }
 
@@ -299,22 +302,24 @@
 
 .bridge .container .link {
     position: absolute;
-    inset: auto auto 150px auto;
+    inset: auto auto 170px auto;
     width: 1200px;
     display: flex;
     margin: 0 auto;
-    gap: 50px;
-    font-size: 18px;
+    gap: 55px;
+    font-size: 16px;
 }
 
 .bridge .container a {
     display: inline-block;
-    border: 1px solid #fff;
-    padding: 15px 70px 20px 70px;
+    border: 1px solid #f9f9f9;
+    padding: 15px 60px 20px 60px;
+
 }
 
 .bridge .container a::after {
     content: "\e93f";
+    vertical-align: middle;
     font-family: xeicon;
     margin: 0 10px;
 
@@ -325,32 +330,51 @@
 }
 
 .news h2 {
+    padding: 0 0 0 15px;
     margin: 0 0 50px 0;
     font-size: 27px;
     font-weight: 500;
-    text-align: center;
 
+}
+
+.news a {
+    padding: 0 15px 0 0;
 }
 
 .news .container {
     position: relative;
-    width: 1200px;
+    width: 1230px;
     margin: 0 auto;
 
 }
 
+.news .main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news .main a {
+    color: #999999;
+    vertical-align: middle;
+}
+
+.news .main i {
+    color: #057c2d;
+    vertical-align: middle;
+
+}
+
 .news .container figure {
-    margin: 0 15px;
-    border-bottom: 3px solid #ddd;
+    padding: 0 15px;
 }
 
 .news .container img {
     margin: 0 0 25px 0;
 }
 
-.news .container i {
+.news .container .arrows i {
     position: absolute;
-    inset: 35% auto auto 50%;
+    inset: 45% auto auto 50%;
     transform: translate(-50%, -50%);
     color: #9f9f9f;
     font-size: 72px;
@@ -377,20 +401,40 @@
 
 .news .slider strong {
     display: block;
-    margin: 0 0 30px 0;
+    padding: 0 0 30px 0;
     font-size: 14px;
     font-weight: 300;
+    border-bottom: 3px solid #ddd;
 }
 
 .social {
+    position: relative;
     padding: 0 0 100px 0;
     text-align: center;
 }
 
-.social h2 {
+
+.social .main {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.social .main h2 {
     font-size: 27px;
     font-weight: 500;
     margin: 0 0 50px 0;
+}
+
+.social .main a {
+    color: #999999;
+    vertical-align: middle;
+}
+
+.social .main i {
+    color: #057c2d;
+    vertical-align: middle;
 }
 
 .social .socialSlider {
@@ -399,7 +443,12 @@
 }
 
 .social .socialSlider figure {
-    padding: 0 15px;
+    padding: 0 0 0 30px;
+    margin: 0 0 50px 0;
+}
+
+.social .slick-slider {
+    width: 100%;
 }
 
 .social .socialSlider img {
@@ -423,9 +472,46 @@
     display: block;
 }
 
-.social .socialSlider ul {
+.social .socialSlider .slick-dots {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
 
+.social .socialSlider .slick-dots li {
+    outline: none;
+    background: #ddd;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+.social .socialSlider .slick-dots li.slick-active {
+    background: #01a251;
+    width: 15px;
+    height: 15px;
+}
+
+.social .socialSlider .slick-dots li button {
+    display: none;
+}
+
+.social .arrows i {
+    position: absolute;
+    font-size: 19px;
+    inset: auto auto 89px calc(50% - 10px);
+    transform: translateY(-50%);
+    color: #666;
+    z-index: 999;
+}
+
+.social .arrows i:nth-child(1) {
+    margin: auto auto auto -90px;
+}
+
+.social .arrows i:nth-child(2) {
+    margin: auto auto auto 90px;
 }
 
 .toTop {
@@ -442,10 +528,9 @@
 .footer {}
 
 .footer .inner {
-    padding: 30px 0 100px 0;
+    padding: 30px 0 50px 0;
     background: #057c2d;
     color: #fff;
-
     vertical-align: middle;
 
 }
@@ -454,34 +539,72 @@
     width: 1200px;
     display: flex;
     margin: 0 auto;
-    align-items: center;
     text-align: center;
+    align-items: center;
     gap: 65px;
+    justify-content: space-between;
+}
+
+.footer .top {
+    margin: 0 auto 15px auto;
 }
 
 .footer .container h2 {
     width: 150px;
 }
 
-.footer .container nav>ul {
+.footer .container .topMenu {
     display: flex;
-    gap: 40px;
-    width: 770px;
-    font-size: 14px;
-    font-weight: 100;
 }
 
-.footer .container nav>ul>li~li::before {
+.footer .container nav {
+    padding: 0 0 0 75px;
+}
+
+.footer .container dd {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer .container nav>dl>dd~dd::before {
     content: "";
     display: inline-block;
-    text-align: center;
+    margin: 0 15px;
     width: 1px;
     height: 10px;
     background: #f9f9f9;
 }
 
-.footer .familySite {
-    display: inline-block;
+.footer .middle address {
+    font-style: inherit;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 0 5px 0;
+}
+
+.footer .bottom {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.footer .top select {
+    font-size: 14px;
+    font-weight: 300;
+    background: transparent;
+    color: #fff;
+    padding: 3px 15px;
+    border: none;
     border-bottom: 1px solid #ddd;
-    vertical-align: middle;
+}
+
+.footer .top .icon a {
+    display: inline-block;
+    font-size: 24px;
+    padding: 3px 1px 0 1px;
+
+}
+
+.footer .top #fl option {
+    color: #333;
 }

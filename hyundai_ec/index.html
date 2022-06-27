@@ -15,7 +15,7 @@
     <!-- { 2022.06.21 hongjiwon header -->
     <header class="header">
         <div class="container">
-            <h2><img src="./img/logo-hyundai.png" alt=""></h2>
+            <h2><img src="./img/logo-hyundai.svg" alt=""></h2>
             <nav>
                 <ul>
                     <li><a href="">사업소개 · 혁신기술</a></li>
@@ -116,10 +116,10 @@
                     <a href="">디에이치
 
                     </a>
-                    <a href=""> 힐스테이트
+                    <a href="">힐스테이트
 
                     </a>
-                    <a href=""> 초대형 주거단지
+                    <a href="">초대형 주거단지
 
                     </a>
                     <a href="">지식산업센터
@@ -144,8 +144,11 @@
             </div>
         </section>
         <section class="news">
-            <h2>뉴스룸</h2>
             <div class="container">
+                <div class="main">
+                    <h2>뉴스룸</h2>
+                    <a href="">more<i class="xi-angle-right-min"></i></a>
+                </div>
                 <div class="slider">
                     <figure class="itm01">
                         <img src="./img/news01.jpg" alt="">
@@ -197,9 +200,11 @@
             </div>
         </section>
         <section class="social">
-            <h2>소셜 채널</h2>
+            <div class="main">
+                <h2>소셜 채널</h2>
+                <a href="">more<i class="xi-angle-right-min"></i></a>
+            </div>
             <div class="socialSlider">
-
                 <figure>
                     <img src="./img/hyundai_social04.png" alt="">
                     <p>페트병으로 수소를? <br>
@@ -227,26 +232,46 @@
                         (Feat.필리핀 아레나)</p>
                 </figure>
             </div>
+            <div class="arrows">
+                <i class="xi-angle-left"></i>
+                <i class="xi-angle-right"></i>
+            </div>
         </section>
 
     </main>
     <footer class="footer">
         <section class="inner">
             <div class="container top">
-                <h2><img src="./img/main_logo.png" alt=""></h2>
-                <nav>
-                    <ul>
-                        <li><a href="">개인정보 처리 방침</a></li>
-                        <li><a href="">법적고지</a></li>
-                        <li><a href="">사이버 감사실</a></li>
-                        <li><a href="">뉴스룸 운영 정책</a></li>
-                        <li><a href="">고객 상담</a></li>
-                    </ul>
-                </nav>
-                <a href="" class='familySite'><i class="xi-angle-up"></i>Family Site</a>
+                <div class="topMenu">
+                    <h2><img src="./img/main_logo.png" alt=""></h2>
+                    <nav>
+                        <dl>
+                            <dd><a href="">개인정보 처리 방침</a></dd>
+                            <dd><a href="">법적고지</a></dd>
+                            <dd><a href="">사이버 감사실</a></dd>
+                            <dd><a href="">뉴스룸 운영 정책</a></dd>
+                            <dd><a href="">고객 상담</a></dd>
+                        </dl>
+                    </nav>
+                </div>
+                <div class="familySite">
+                    <select id="fl">
+                        <option value="">Family Site</option>
+                        <option value="">Kakaotalk</option>
+                        <option value="">Instagram</option>
+                        <option value="">Github</option>
+                    </select>
+                    <div class="icon">
+                        <a href=""><i class="xi-kakaotalk"></i></a>
+                        <a href=""><i class="xi-facebook"></i></a>
+                        <a href=""><i class="xi-youtube-play"></i></a>
+                        <a href=""><i class="xi-instagram"></i></a>
+                    </div>
+                </div>
             </div>
             <div class="container middle">
-                <p>03058 서울시 종로구 율곡로 75 현대빌딩 ㅣ 사업자등록번호 101-81-16293 ㅣ T. 1577-7755</p>
+                <address>03058 서울시 종로구 율곡로 75 현대빌딩 ㅣ 사업자등록번호 101-81-16293 ㅣ <a href="tel:1577-7755">T. 1577-7755</a>
+                </address>
             </div>
             <strong class="container bottom">&copy;2022 HYUNDAI E&C. ALL RIGHTS RESERVED.</strong>
             <div class="toTop">

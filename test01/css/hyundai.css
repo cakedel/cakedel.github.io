@@ -1,7 +1,3 @@
-* {
-    /* border: 1px solid #333; */
-}
-
 .Wrap {}
 
 .header .container {
@@ -72,7 +68,6 @@
 }
 
 .mainVisual {
-    /* background: url(../img/mainVisual.jpg) no-repeat top center/cover; */
     text-align: right;
     color: #fff;
 }
@@ -231,8 +226,6 @@
     margin: 0 auto;
     width: 1200px;
     text-align: center;
-
-
 }
 
 .business .container .const {
@@ -334,7 +327,6 @@
     margin: 0 0 50px 0;
     font-size: 27px;
     font-weight: 500;
-
 }
 
 .news a {
@@ -345,7 +337,6 @@
     position: relative;
     width: 1230px;
     margin: 0 auto;
-
 }
 
 .news .main {
@@ -361,7 +352,6 @@
 .news .main i {
     color: #057c2d;
     vertical-align: middle;
-
 }
 
 .news .container figure {
@@ -524,8 +514,6 @@
     border-radius: 50%;
     cursor: pointer;
 }
-
-.footer {}
 
 .footer .inner {
     padding: 30px 0 50px 0;

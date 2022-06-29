@@ -1,0 +1,43 @@
+로고는 h1
+동영상을 나올 때의 가독성
+동영상을 잘림없이 다 보이게 100vh overflowhidden
+
+section이 한번 위에서 100vh로 가지면 밑에서는 잘 잡지 않는다.
+
+반복되는 것은 ul 태그에 담아둔다.>li
+
+h2는 섹션 한 덩어리의 타이틀
+파트파트별의 큰 덩어리들의 타이틀은 h3
+그밑의 구성 h4> h5
+
+footer에서 section은 잘 짜지 않는다.
+footer가 하나의 section 덩어리다.
+---------------------------------------
+스크롤바가 있으면 안됨...
+body에 overflowhidden X축
+
+h1 책제목> h2 큰 목차 section 바로 아래 > h3 파트별 큰 덩어리의 타이틀>
+
+left center right
+top middle bottom
+
+h 태그 안에 박스 넣기x
+p태그 안에 구조물 넣기x
+
+border를 투명transparent 하게 주고 hover를 때린다.
+
+object p overflowhidden
+
+nav는 header에서 한번만 쓰기
+nav에 gnb 클래스 네이밍
+
+h2 안에는 박스가 들어가지 않는다.
+
+class에 번호를 붙이지 않도록 한다.
+p 태그에 line height 줄 것
+
+사이트의 성격에 어울리는 폰트를 쓰고 있는가.
+가독성이 충분히 나오는가.
+제품을 보여주는 것이 고객의 니즈.
+
+바깥 section 박스 간 간격은 padding으로 준다.

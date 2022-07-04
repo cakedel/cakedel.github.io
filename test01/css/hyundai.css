@@ -59,7 +59,7 @@
     color: #fff;
     text-shadow: 0 0 3px #000;
     cursor: pointer;
-    padding: 0 10px;
+    padding: 0 0 0 10px;
 }
 
 .header .container h1 img {
@@ -69,7 +69,6 @@
 .mainVisual {
     background: url(../img/mainVisual.jpg) no-repeat center center/cover;
     text-align: right;
-    color: #fff;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -79,19 +78,19 @@
     position: relative;
     width: 1200px;
     margin: 0 auto;
+    color: #fff;
 }
 
-.mainVisual .container {
+.mainVisual .mainTitle .container {
     position: absolute;
-    inset: 50% 0 auto auto;
+    inset: 250px 0 auto auto;
 }
 
-.mainVisual .mainVisual .container::after {
+.mainVisual i {
     position: absolute;
-    content: "\e941";
-    font-family: xeicon;
+    color: #fff;
     font-size: 40px;
-    inset: 570px auto auto 50%;
+    inset: auto auto 5% 50%;
     transform: translateX(-50%);
 }
 
@@ -450,7 +449,7 @@
 }
 
 .social .socialSlider figure {
-    padding: 0 0 0 30px;
+    padding: 0 15px;
     margin: 0 0 50px 0;
 }
 

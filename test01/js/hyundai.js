@@ -19,7 +19,7 @@ $(function () {
         arrows: false,
         dots: true,
         centerMode: true,
-        centerPadding: '16%'
+        centerPadding: '17%'
     });
     $('.slogan .slideArrows i:nth-child(1)').on('click', function () {
         $('.slide').slick('slickPrev')
@@ -47,7 +47,7 @@ $(function () {
         slidesToShow: 3,
         slidesToScroll: 3,
         centerMode: true,
-        centerPadding: '300px',
+        centerPadding: '17%',
         varialbeWidth: true,
         infinite: true,
 

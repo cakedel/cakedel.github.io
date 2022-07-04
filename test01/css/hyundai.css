@@ -10,7 +10,6 @@
     margin: 0 auto;
     padding: 30px 0;
     color: #fff;
-    text-shadow: 0 0 3px #000;
     z-index: 999;
     align-items: center;
 
@@ -57,7 +56,6 @@
     outline: none;
     font-size: 18px;
     color: #fff;
-    text-shadow: 0 0 3px #000;
     cursor: pointer;
     padding: 0 0 0 10px;
 }
@@ -140,11 +138,11 @@
     width: 1200px;
     height: 500px;
     margin: 0 15px;
-    filter: grayscale(0.5) brightness(150%) contrast(0.5);
+    filter: grayscale(0.5) brightness(0.3) contrast(0.5);
 }
 
 .slogan .slide figure.slick-current {
-    filter: grayscale(0) brightness(1);
+    filter: grayscale(0) brightness(0.5);
 }
 
 .slogan .itm01 {
@@ -179,7 +177,7 @@
     font-size: 60px;
     color: #fff;
     background: rgba(0, 0, 0, 0.3);
-    padding: 5px 25px;
+    padding: 5px 20px;
     border-radius: 5px;
 }
 
@@ -228,45 +226,54 @@
 
 .business .container {
     display: flex;
+    gap: 30px;
     margin: 0 auto;
     width: 1200px;
     text-align: center;
 }
 
+.business .top {
+    margin: 0 auto 30px auto;
+}
+
+
 .business .container .const {
     flex: 1;
-    padding: 90px 0;
+    padding: 50px 0;
     width: 380px;
-    color: #fff;
+    color: #333;
 }
 
 .business .container .const:nth-child(1) {
-    background: #057c2d;
+    border: 1px solid #01a251;
+    border-radius: 50px;
 }
 
 .business .container .const:nth-child(2) {
-    background: #00953b;
+    border: 1px solid #01a251;
+    border-radius: 50px
 }
 
 .business .container .const:nth-child(3) {
-    background: #00c05f;
+    border: 1px solid #01a251;
+    border-radius: 50px
 }
 
 .business .const h3 {
+    color: #01a251;
     font-size: 24px;
     font-weight: 500;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
 }
 
 .business .const p {
     line-height: 1.2;
-    font-size: 15px;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0 0 50px 0;
 }
 
-.business .const figure {
-    width: 95px;
+.business .const img {
+    width: 80px;
     margin: 0 auto 40px auto;
 }
 
@@ -517,6 +524,7 @@
 }
 
 .toTop {
+    display: none;
     position: fixed;
     inset: auto 50px 50px auto;
     font-size: 40px;

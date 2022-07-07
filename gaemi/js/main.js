@@ -2,7 +2,6 @@ $(function () {
     $('.mainSlider').slick({
         arrows: false,
         autoplay: true,
-        pauseOnHover: false,
         centerMode: true,
         centerPadding: '700px',
     })
@@ -21,7 +20,5 @@ $(function () {
         opacity: 1,
         showControls: false,
         playOnlyIfVisible: true,
-        //보일때만 재생하라는 옵션
-
     });
 })

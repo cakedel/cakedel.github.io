@@ -21,4 +21,18 @@ $(function () {
         showControls: false,
         playOnlyIfVisible: true,
     });
+    $('.tabMenu li').on('click', function (event) {
+        event.preventDefault();
+        $('.tabMenu li').removeClass('on')
+        $(this).addClass('on');
+        var idx = $(this).index();
+        $('.tabContent>div').removeClass('on');
+        $('.tabContent>div').eq(idx).addClass('on');
+    })
+    $('.tabContent .adress li').on('click', function (event) {
+        event.preventDefault()
+        var idx = $(this).index();
+        $('.rightContent>li').removeClass('on')
+        $('.rightContent>li').eq(idx).addClass('on');
+    })
 })

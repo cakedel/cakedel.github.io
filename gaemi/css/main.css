@@ -40,7 +40,7 @@
 
 .mainSlider figure { height: 600px; } 
 .mainSlider figure img { padding: 70px 0; } 
-.mainSlider figure.slick-current img { transform: scale(1.3); transition: 0.5s; } 
+.mainSlider figure.slick-current img { transform: scale(1.2); transition: 0.5s; } 
 
 .mainSlider figure .menuP { display: none; padding: 0 0 0 50px; } 
 .mainSlider figure.slick-current .menuP { display: block; } 

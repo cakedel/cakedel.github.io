@@ -9,4 +9,4 @@
 	url = https://github.com/peonyblue/responsiveWeb
 [submodule "portfolio"]
 	path = portfolio
-	url = https://github.com/peonyblue/portfolio
+	url = https://github.com/peonyblue/portfolio.git

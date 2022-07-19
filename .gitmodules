@@ -3,7 +3,7 @@
 	url = https://github.com/peonyblue/javascriptBasic.git
 [submodule "javascriptBasic"]
 	path = javascriptBasic
-	url = https://github.com/peonyblue/javascriptBasic
+	url = https://github.com/peonyblue/javascriptBasic.git
 [submodule "responsiveWeb"]
 	path = responsiveWeb
 	url = https://github.com/peonyblue/responsiveWeb

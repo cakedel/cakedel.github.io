@@ -10,6 +10,3 @@
 [submodule "portfolio"]
 	path = portfolio
 	url = https://github.com/peonyblue/portfolio.git
-[submodule "porfol"]
-	path = porfol
-	url = https://github.com/peonyblue/porfol.git

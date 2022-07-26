@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse wheel</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        section {
+            background: #333;
+            height: 100vh;
+            position: relative;
+        }
+
+        section .wheel {
+            position: absolute;
+            inset: auto auto 50px 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 70px;
+            border: 2px solid #fff;
+            border-radius: 20px;
+        }
+
+        section .wheel span {
+            font-size: 0;
+            position: absolute;
+            inset: 10px auto auto 16px;
+            width: 4px;
+            height: 12px;
+            background: #fff;
+            border-radius: 2px;
+            animation: wheel 0.5s infinite;
+        }
+
+        @keyframes wheel {
+            to {
+                top: 15px;
+            }
+        }
+
+        .s2 {
+            padding: 100px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <a href="#s2" class="wheel">
+            <span>bottom</span>
+        </a>
+    </section>
+    <section id="s2"></section>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $('a').on('click', function (e) {
+                e.preventDefault()
+                console.log($(this.hash).offset().top);
+                var hash = $(this.hash).offset().top
+                $('html, body').animate({scrollTop:hash}, 500)
+
+            })
+        })
+    </script>
+</body>
+
+</html>

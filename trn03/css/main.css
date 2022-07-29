@@ -4,7 +4,7 @@ body { font-size: 1.6rem; }
 
 .container { display: flex; width: 120rem; margin: 0 auto; } 
 
-.TopBanner { padding: 3rem 0 3rem 0; background: #f8f8f8; } 
+.TopBanner {position: relative; padding: 3rem 0 3rem 0; background: #f8f8f8; z-index: 999;} 
 .TopBanner .container { position: relative; display: block; } 
 .TopBanner h2 { font-size: 2.5rem; font-weight: 700; margin: 0 0 1rem 0; } 
 .TopBanner p { font-size: 1.3rem; } 
@@ -16,40 +16,102 @@ body { font-size: 1.6rem; }
 .header h1 { font-size: 0; } 
 
 .gnb { margin: 0 0 0 auto; } 
-.gnb>ul { display: flex; gap: 30px;} 
+.gnb>ul { display: flex; gap: 30px; } 
 .gnb>ul>li { position: relative; } 
 .gnb>ul>li~li::before { content: ""; position: absolute; inset: 50% auto auto 0; transform: translateY(-50%); display: block; width: 1px; height: 12px; background: #999; } 
 
-#searchForm { margin : 0 0 0 4rem; }
-#searchForm input[name='search'] {
-    outline: none;
-    border: none;
-    color: #333;
-    background: transparent;
-    border-bottom: 1px solid #333;
+#searchForm { margin : 0 0 0 4rem; } 
+#searchForm input[name='search'] { outline: none; border: none; color: #333; background: transparent; border-bottom: 1px solid #333; } 
+#searchForm input[name='search']::placeholder { color: #ddd; } 
+#searchForm input[name='search']:focus::placeholder { background: transparent; color: transparent; } 
+#searchForm button { border: none; background: transparent; font-size: 21px; cursor: pointer; } 
+/* h5 {
+    display: flex;
+    align-items: center;
 }
-#searchForm input[name='search']::placeholder {
-    color: #ddd;
+h5::after { content: ''; flex: 1; display: block; width: 30px; height: 1px; background:#ddd; margin: 0 0 0 20px; } */
+/* h6 {display: flex; align-items: center;}
+h6::before { content: ''; flex: 1; display: block; width: 30px; height: 1px; background:#ddd; margin: 0 20px 0 0; } 
+h6::after { content: ''; flex: 1; display: block; width: 30px; height: 1px; background:#ddd; margin: 0 0 0 20px; } */
+
+.mainVisual {position: relative;}
+.mainVisual .mainSlider figure {
+    height: 60rem;
 }
-#searchForm input[name='search']:focus::placeholder {
-    background: transparent;
-    color: transparent;
-} 
-#searchForm button {
-    border: none;
-    background: transparent;
-    font-size: 21px;
-    cursor: pointer;
+.mainSlider {position: relative;}
+.mainSlider .itm01 {
+    background: url(../img/mainvisual01.jpg) no-repeat center center/cover;
+}
+.mainSlider .itm02 {
+    background: url(../img/mainvisual02.jpg) no-repeat center center/cover;
+}
+.mainSlider .itm03 {
+    background: url(../img/mainvisual03.jpg) no-repeat center center/cover;
+}
+.mainSlider .itm04 {
+    background: url(../img/mainvisual02.jpg) no-repeat center center/cover;
 }
 
-/* .pop { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%); width: 400px; height: 500px; background: #f1f1f1; border: 1px solid #333; } 
+.mainVisual .slogan {
+    
+    position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 0 0 3px #333;
+}
 
-.pop:nth-of-type(2) { top: 40%; left: 40% } 
-.pop:nth-of-type(3) { top: 30%; left: 30% } 
-.pop:nth-of-type(4) { top: 20%; left: 20% } 
-.pop:nth-of-type(5) { top: 10%; left: 10% } 
+.mainVisual .slogan h2 {
+    font-size: 5rem;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    text-indent: -2px;
+}
+.mainVisual .slogan p {
+    
+    margin: 0 0 30px 0;
+}
 
-.pop button { position: absolute; inset: auto 10px 10px auto; } */
+.mainVisual .slogan a {
+    display: inline-block;
+    padding: 0.2rem 1.5rem 0.6rem 1.5rem;
+    background: #000;
+}
+
+.mainSlider .slick-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);  
+}
+.mainSlider .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 5rem;
+    height: 0.4rem;
+    background: #333;
+    border-radius: 0.2rem;
+    margin: 0 0.2rem;
+    overflow: hidden;
+}
+
+.mainSlider .slick-dots li::after {
+    position: absolute;
+    inset: 0 auto auto 0;
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #f00;
+    
+}
+
+.mainSlider .slick-dots li.slick-active::after {
+    width: 100%;
+    transition: 2s;
+}
+
+.mainSlider .slick-dots button {
+    display: none;
+}
 
 @media (max-width: 768px){
  .container { display: flex; flex-direction: column; width: auto; margin: 0 auto; } 

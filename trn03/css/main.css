@@ -1,0 +1,62 @@
+html { font-size: 10px; } 
+body { font-size: 1.6rem; } 
+.Wrapper { } 
+
+.container { display: flex; width: 120rem; margin: 0 auto; } 
+
+.TopBanner { padding: 3rem 0 3rem 0; background: #f8f8f8; } 
+.TopBanner .container { position: relative; display: block; } 
+.TopBanner h2 { font-size: 2.5rem; font-weight: 700; margin: 0 0 1rem 0; } 
+.TopBanner p { font-size: 1.3rem; } 
+.TopBanner a { display: inline-block; padding: 0.2rem 1.5rem 0.5rem 1.5rem; border: 1px solid #888; transform: translateY(-0.2rem); margin: 0 0 0 2rem; } 
+.TopBanner i { position: absolute; inset: 0 0 auto auto; } 
+
+.header { line-height: 10rem; background: rgb(255, 224, 224); } 
+
+.header h1 { font-size: 0; } 
+
+.gnb { margin: 0 0 0 auto; } 
+.gnb>ul { display: flex; gap: 30px;} 
+.gnb>ul>li { position: relative; } 
+.gnb>ul>li~li::before { content: ""; position: absolute; inset: 50% auto auto 0; transform: translateY(-50%); display: block; width: 1px; height: 12px; background: #999; } 
+
+#searchForm { margin : 0 0 0 4rem; }
+#searchForm input[name='search'] {
+    outline: none;
+    border: none;
+    color: #333;
+    background: transparent;
+    border-bottom: 1px solid #333;
+}
+#searchForm input[name='search']::placeholder {
+    color: #ddd;
+}
+#searchForm input[name='search']:focus::placeholder {
+    background: transparent;
+    color: transparent;
+} 
+#searchForm button {
+    border: none;
+    background: transparent;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+/* .pop { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%); width: 400px; height: 500px; background: #f1f1f1; border: 1px solid #333; } 
+
+.pop:nth-of-type(2) { top: 40%; left: 40% } 
+.pop:nth-of-type(3) { top: 30%; left: 30% } 
+.pop:nth-of-type(4) { top: 20%; left: 20% } 
+.pop:nth-of-type(5) { top: 10%; left: 10% } 
+
+.pop button { position: absolute; inset: auto 10px 10px auto; } */
+
+@media (max-width: 768px){
+ .container { display: flex; flex-direction: column; width: auto; margin: 0 auto; } 
+ .TopBanner { position: absolute; inset: 50% 1.5rem auto 1.5rem; transform: translateY(-50%); padding: 3rem; background: #f8f8f8; } 
+ .TopBanner .container { position: static; display: block; } 
+ .TopBanner h2 { font-size: 2.5rem; font-weight: 700; margin: 0 0 1rem 0; } 
+ .TopBanner p { font-size: 1.3rem; line-height: 1.4; } 
+ .TopBanner a { display:block; padding: 0.2rem 1.5rem 0.5rem 1.5rem; width: 70px; text-align: center; border: 1px solid #888; transform: translateY(0); margin: 2rem 0 0 0; } 
+ .TopBanner i { position: absolute; inset: 0 0 auto auto; padding: 0.5rem; background: #333; color: #fff; } 
+ }

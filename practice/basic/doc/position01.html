@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position review</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background: rgba(0, 0, 255, 0.3);
+        text-align: center;
+        line-height: 100px;
+        color: #fff;
+    }
+
+    /* positon: relative; 좌표를 가지는 상태. */
+    /* 박스라서 세로로 쌓이는 상태 */
+    .position-relative {
+        margin: 0 0 100vh 0;
+    }
+    
+    .position-relative div {
+        position: relative;
+        top: 100px;
+        left: 100px;
+        
+
+    }
+
+    .position-absolute span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* position 값을 줘야만 제대로 작동한다 */
+        /* position 값을 주지 않으면 html상 위에 있는 박스 밑에 쌓여서 떠있다. */
+        margin: 0 0 100vh 0;
+    }
+
+    .position-absolute span:nth-child(1) {
+        top: 20px;
+        left: 20px;
+    }
+    .position-absolute span:nth-child(2) {
+        top: 40px;
+        left: 40px;
+    }
+    .position-absolute span:nth-child(3) {
+        top: 60px;
+        left: 60px;
+    }
+    .position-absolute span:nth-child(4) {
+        top: 80px;
+        left: 80px;
+    }
+    .position-absolute span:nth-child(5) {
+        top: 100px;
+        left: 100px;
+    }
+
+    .position-fixied {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    .position-sticky {
+        position: sticky;
+        top: 0;
+        line-height: 100px;
+        background: #333;
+    }
+</style>
+
+<body>
+    <header class="position-sticky">
+        header
+    </header>
+    <section class="position-relative">
+        <div class="box">01</div>
+        <div class="box">02</div>
+        <div class="box">03</div>
+        <div class="box">04</div>
+        <div class="box">05</div>
+    </section>
+    <section class="position-absolute">
+        <span class="box">01</span>
+        <span class="box">02</span>
+        <span class="box">03</span>
+        <span class="box">04</span>
+        <span class="box">05</span>
+        <button class="position-fixied">FIXED</button>
+    </section>
+
+</body>
+
+</html>

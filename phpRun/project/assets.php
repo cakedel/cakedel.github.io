@@ -8,5 +8,5 @@ $cCeo = 'HONG JI WON';
 $cAdress = 'Busan, BukGu, MandukDong 1324-342';
 
 $slogan = '현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.';
-$eSlogan = 'along the new path created';
+$eSlogan = 'world expands along the new path created by Hyundai Elevator';
 ?>

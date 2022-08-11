@@ -4,7 +4,20 @@
             <img src="./img/logo02.png" alt="">
         </div>
         <address>
-            address
+            <ul>
+                <li>주소 : <?= $cAdress ?></li>
+                <li>대표 : <?= $cCeo ?></li>
+                <li>사업자등록번호 : <?= $cNum ?></li>
+                <li>전화 :
+                    <a href="tel:<?= $tel ?>"><?= $tel ?></a>
+                </li>
+                <li>이메일 :
+                    <a href="mailto:<?= $email ?>"><?= $email ?></a>
+                </li>
+            </ul>
+            <div class="copyright">
+                &copy; <?= $company ?> all rights reserved.
+            </div>
         </address>
     </div>
 </footer>

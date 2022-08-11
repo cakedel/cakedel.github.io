@@ -131,6 +131,61 @@ body {
     display: none;
 }
 
+.Customer {
+    padding: 100px 0;
+}
+
+.Customer .container {
+    gap: 50px;
+}
+
+.Customer .container>li {
+    width: calc(1200px / 3);
+    background: #ff0;
+}
+
+/* .Customer .container {
+    display: block;
+    width: 1250px;
+}
+
+.Customer .container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.Customer .container>li {
+    float: left;
+    width: 33.333333%;
+    padding: 0 25px;
+    min-height: 450px;
+}
+
+.Customer .container>li~li {
+    border-left: 1px solid var(--bl);
+} */
+
+.Customer .list h3 {
+    font-size: 19px;
+    line-height: 40px;
+    border-bottom: 1px solid var(--bl);
+}
+
+.Customer .list small {
+    float: right;
+}
+.Customer .list i {
+    padding: 5px;
+    background: var(--bl);
+    font-size: 12px;
+}
+
+.Customer .list li {
+    line-height: 40px;
+    border-bottom: 1px solid var(--bl);
+}
+
 .SubMain {
     padding: 100px 0;
     color: var(--wc);

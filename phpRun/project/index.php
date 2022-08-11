@@ -14,28 +14,34 @@
     </section>
     <section class="Customer">
         <ul class="container">
-            <h3>news &amp; notice <small><a href="">more </a><i class="xi-angle-right"></i></small></h3>
-            <ul>
-                <li><a href=""><?= $slogan ?></a><span>2022.12.25</span></li>
-                <li><a href=""><?= $slogan ?></a><span>2022.12.25</span></li>
-                <li><a href=""><?= $slogan ?></a><span>2022.12.25</span></li>
-                <li><a href=""><?= $slogan ?></a><span>2022.12.25</span></li>
-            </ul>
             <li>
-                <div class="ProductSlider">
-                    <figure>
-                        <img src="./img/p01.jpg" alt="">
-                    </figure>
-                    <figure>
-                        <img src="./img/p02.jpg" alt="">
-                    </figure>
-                    <figure>
-                        <img src="./img/p03.jpg" alt="">
-                    </figure>
+                <div class="list">
+                    <h3>news &amp; notice <small><a href="">more </a><i class="xi-angle-right"></i></small></h3>
+                    <ul>
+                        <li><a href=""><?= $slogan ?></a><span>2022.12.25</span></li>
+                        <li><a href=""><?= $slogan ?></a><span>2022.12.25</span></li>
+                        <li><a href=""><?= $slogan ?></a><span>2022.12.25</span></li>
+                        <li><a href=""><?= $slogan ?></a><span>2022.12.25</span></li>
+                    </ul>
                 </div>
-                <div class="produtArrows">
-                    <i class="xi-angle-left"></i>
-                    <i class="xi-angle-right"></i>
+            </li>
+            <li>
+                <div class="slider">
+                    <div class="ProductSlider">
+                        <figure>
+                            <img src="./img/p01.jpg" alt="">
+                        </figure>
+                        <figure>
+                            <img src="./img/p02.jpg" alt="">
+                        </figure>
+                        <figure>
+                            <img src="./img/p03.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="produtArrows">
+                        <i class="xi-angle-left"></i>
+                        <i class="xi-angle-right"></i>
+                    </div>
                 </div>
             </li>
             <li>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭 메뉴 안 슬라이드</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/slick.css">
+</head>
+<style>
+    .tabCon {
+        position: relative;
+    }
+
+    .tabCon>div {
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    .tabCon>div.on {
+        height: auto;
+        visibility: visible;
+    }
+</style>
+
+<body>
+    <section class="slide">
+        <ul class="tabMenu">
+            <li>menu01</li>
+            <li>menu02</li>
+        </ul>
+        <div class="tabCon">
+            <div class="on">
+                <div class="left">
+                    <figure>slide01</figure>
+                    <figure>slide02</figure>
+                    <figure>slide03</figure>
+                    <figure>slide04</figure>
+                </div>
+            </div>
+            <div>
+                <div class="right">
+                    <figure>right01</figure>
+                    <figure>right02</figure>
+                    <figure>right03</figure>
+                    <figure>right04</figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script>
+        $(function () {
+            $('.tabMenu li').on('click', function () {
+                var idx = $(this).index();
+                $('.tabCon>div').removeClass('on')
+                $('.tabCon>div').eq(idx).addClass('on');
+
+            })
+            $('.left').slick();
+            $('.right').slick();
+            //.slick('setPosition');
+        })
+    </script>
+</body>
+
+</html>

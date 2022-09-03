@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    /* 가독성이 홀수일 때 좋다. */
+}
+
+#event {
+    padding: 100px 0;
+    text-align: center;
+}
+
+#event i {
+    background: #333;
+    color: #fff;
+    padding: 8px;
+    vertical-align: middle;
+    border-radius: 20%;
+    /* 원형만들기 */
+}
+
+#event h2 {
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+#event h2::before{
+    content: "";
+    display: inline-block;
+    /* block이 아니다. */
+    width: 100px;
+    height: 1px;
+    background: #f00;
+    margin: 0 10px;
+    vertical-align: middle;
+    /* !!!!!가상요소 선택자!!!!! */
+    /* 웹 접근성에서 자유롭다. */
+    /* 읽히지 않아서 꾸밈요소로 많이 쓴다. */
+}
+#event h2::after{
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background: #f00;
+    margin: 0 10px;
+    vertical-align: middle;
+    /* !!!!!가상요소 선택자!!!!! */
+}
+
+#event p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+    line-height: 1.4;
+}
+
+#event .container {
+    display: flex;
+    /* 가로로 세우기 */
+    width: 1200px;
+    /* 1200px 안에 */
+    margin: 0 auto;
+    /* 가운데에 위치시키기 */
+    gap: 30px;
+    /* 공간을 떨어뜨리기 */
+    /* 보통 정해져있는 값이다. */
+    /* IE에서는 호환되지 않음. */
+}
+#event img {
+    max-width: 100%;
+    /* 부모에서 상속받은 값 1200px의 100% */
+    transition: 0.5s;
+}
+#event figure {
+    position: relative;
+    /* !!!!자기자신을 기준으로 지정해줌!!!! */
+    flex: 1;
+    overflow: hidden;
+    /* 이미지의 공간을 균등하게 한 칸씩 차지하게 해보았다. */
+    /* 검색해보고 1분코딩 사이트에서 정독해볼것. */
+}
+
+#event .container figure:hover img {
+    transform: scale(2);
+    /* 레이아웃을 깨지 않는다. */
+}
+
+#event figure a {
+    position: absolute;
+    /* 기준을 안 정해주면 애미애비없음 쪼그라듬 */
+    top: -40px;
+    left: 0;
+    padding: 10px 30px 30px 40px;
+    height: 30px;
+    color: #fff;
+    transition: 0.5s;
+}
+#event figure:hover a {
+    top: 0;
+}

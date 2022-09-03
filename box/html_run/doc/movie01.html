@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>짠짠짠짠 01</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/jquery.mb.YTPlayer.min.css">
+    <style>
+        body {
+            height: 200vh;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .fixed_bg {
+            background: url(../img/mainvisual01.jpg) no-repeat fixed center center/cover;
+            padding: 200px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .movie01 {
+            padding: 100px 0;
+        }
+
+        .movie01 .container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+            gap: 50px;
+        }
+
+        .movie01 .container>div {
+            flex: 1;
+        }
+
+        .movie01 video {
+            max-width: 100%;
+        }
+
+        .movie01 .right {
+            display: flex;
+            flex-direction: column;
+            /* align items의 축이 가로로 바뀐다. */
+            /* align-items: center; */
+            justify-content: center;
+        }
+
+        .movie01 .right i {
+            padding: 10px;
+            font-size: 30px;
+            background: #f7f7f7;
+            border-radius: 3px;
+            margin: 0 10px 0 0;
+        }
+
+        .movie02 {
+            padding: 200px 0;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 3px #000;
+        }
+
+        .movie02 i {
+            font-size: 30px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="fixed_bg">
+        <h2>배경고정하기 : parallax</h2>
+        <!-- parallax :시차 / 생활코딩 참고 -->
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, alias.</p>
+    </section>
+
+    <section class="movie01">
+        <div class="container">
+            <div class="left">
+                <video class="vd01" src="../img/movie01.mp4" autoplay muted playsinline></video>
+                <!-- playsinline : 아이폰, 사파리에서 새 창을 띄우지 않고 재생 -->
+                <!-- muted : 소리 안나옴 -->
+            </div>
+            <div class="right">
+                <div class="inner">
+                    <h2>mp4 movie play</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="control">
+                        <i class="xi-pause"></i>
+                        <i class="xi-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="movie02">
+        <div id="bgndVideo" class="player" data-property="">
+            <h2>동영상 플레이하기 : parallax</h2>
+            <!-- parallax :시차 / 생활코딩 참고 -->
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, alias.</p>
+            <div class="control">
+                <i class="xi-pause"></i>
+                <i class="xi-play"></i>
+                <i class="xi-bars"></i>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery.mb.YTPlayer.min.js"></script>
+    <script>
+        $(function () {
+            $('.movie01 .right i:nth-child(1)').on('click', function () {
+                $('.vd01').trigger('pause');
+            })
+
+            $('.movie01 .right i:nth-child(2)').on('click', function () {
+                $('.vd01').trigger('play');
+            })
+
+            //youtube player
+            $('#bgndVideo').YTPlayer({
+                videoURL: 'https://youtu.be/vPhg6sc1Mk4',
+                containment: '.mainVideo',
+                autoPlay: true,
+                mute: true,
+                startAt: 0,
+                opacity: 1,
+                showControls: false,
+                playOnlyIfVisible: true,
+                //보일때만 재생하라는 옵션
+
+            });
+
+            $('.movie02 i:nth-child(1)').on('click', function () {
+                $('#bgndVideo').YTPPause()
+            });
+
+            $('.movie02 i:nth-child(2)').on('click', function () {
+                $('#bgndVideo').YTPPlay();
+            })
+            $('.movie02 i:nth-child(3)').on('click', function () {
+                $('#bgndVideo').YTPMute();
+            })
+
+        }); // the end
+    </script>
+</body>
+
+</html>

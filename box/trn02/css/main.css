@@ -1,0 +1,889 @@
+.Wrap {}
+
+.container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* flex로 만들 container box */
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* flex가 없는 inner box */
+
+.topBanner {
+    padding: 30px 0;
+    background: #f1f1f1;
+    transition: 1s;
+}
+
+.topBanner .inner {
+    position: relative;
+}
+
+.topBanner h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.topBanner p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.topBanner a {
+    margin: 0 0 0 10px;
+    padding: 3px 15px 5px 15px;
+    /* padding이 들어간 것처럼 보일 뿐 영향이 없음 */
+    background: #333;
+    color: #fff;
+}
+
+.topBanner i {
+    position: absolute;
+    inset: 0 0 auto auto;
+    font-size: 21px;
+    padding: 5px;
+    background: #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* 2022.06.20 peony topBanner */
+
+#header {
+    line-height: 100px;
+    border-bottom: 1px solid #ddd;
+}
+
+#header .container {
+    justify-content: space-between;
+}
+
+#header nav>ul {
+    display: flex;
+}
+
+#header a {
+    padding: 3px 15px 5px 15px;
+
+}
+
+#header nav>ul>li~li::before {
+    /* 형제를 선택하기에 자기자신은 선택이 안됨 */
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 13px;
+    background: #ddd;
+}
+
+#serchForm input[type="text"] {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 5px 0;
+    color: #333;
+}
+
+#serchForm input[type="text"]::placeholder {
+    color: #f00;
+}
+
+#serchForm input[type="text"]:focus::placeholder {
+    opacity: 0;
+}
+
+#serchForm button {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 21px;
+}
+
+.mainVisual {
+    position: relative;
+}
+
+.mainVisual .mainSlider figure {
+    position: relative;
+    height: 600px;
+}
+
+.mainVisual .mainSlider figure h2 {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.mainVisual .mainSlider figure.on h2 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.mainVisual .mainSlider figure p {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.mainVisual .mainSlider figure.on p {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: 0.5s 0.5s;
+}
+
+.mainVisual .mainSlider figure a {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.mainVisual .mainSlider figure.on a {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 1.3s;
+}
+
+.mainVisual .itm01 {
+    background: url(../img/mainvisual01.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .itm02 {
+    background: url(../img/mainvisual02.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .itm03 {
+    background: url(../img/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .inner {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+}
+
+.mainVisual .inner h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.mainVisual .inner p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
+
+.mainVisual .inner a {
+    display: inline-block;
+    padding: 3px 20px 6px 20px;
+    background: #333;
+}
+
+.mainVisual .slick-dots {
+    gap: 5px;
+    position: absolute;
+    inset: auto auto 100px 50%;
+    transform: translateX(-50%);
+}
+
+.mainVisual .slick-dots li {
+    display: inline-block;
+}
+
+.mainVisual .slick-dots button {
+    border-radius: 50%;
+    border: none;
+    width: 22px;
+    height: 22px;
+    outline: none;
+    margin: 0 2px;
+}
+
+.mainVisual .slick-dots li.slick-active button {
+    background: #f00;
+    color: #fff;
+}
+
+.slideNum {
+    position: absolute;
+    inset: 50px auto auto 50%;
+    margin: 0 0 0 600px;
+    transform: translateX(-100%);
+    /* 자기자신만큼 이동해라 */
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    font-size: 41px;
+}
+
+.mainArrow i {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 100px;
+}
+
+.mainArrow i:nth-child(1) {
+    margin: 0 0 0 -700px
+}
+
+.mainArrow i:nth-child(2) {
+    margin: 0 0 0 700px;
+}
+
+.mainArrow i.on:nth-child(1) {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* 순서 */
+/* position> display> margin,padding> font */
+.mainContent {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.mainContent h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+/* em : 폰트사이즈의 n배 */
+/* rem : 원 폰트 사이즈의 n배 */
+/* vh : 모바일 메뉴가 꽉 차게 만들 때 */
+/* vw : 모바일에서 폰트 사이즈 조정할 때 */
+.mainContent p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+/* class 길이는 최대 3~4개
+가장 위의 부모를 표시해주기 */
+.mainContent .container {
+    gap: 30px;
+}
+
+.mainContent .container figure {
+    flex: 1;
+    /* flex는 신축성을 가지고 있기에 slick에서 문제가 된다. */
+}
+
+.mainContent .container img {
+    margin: 0 0 10px 0;
+}
+
+.mainContent .container strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    letter-spacing: -0.025em;
+}
+
+.mainContent .container a {
+    /* display block으로 하면 박스가 늘어나는 상황 */
+    /* 길이가 늘어나도 박스에 맞춰서 라인이 줄바꿈됨 */
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    display: inline-block;
+    padding: 3px 15px 5px 15px;
+    border: 1px solid #333;
+    font-size: 15px;
+    letter-spacing: -0.025em;
+}
+
+.mainContent02 {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.mainContent02::before {
+    position: absolute;
+    inset: -20px auto auto 50%;
+    transform: translateX(-50%);
+    content: "\e904";
+    font-family: xeicon;
+    font-size: 20px;
+    padding: 10px;
+    background: #ddd;
+    border-radius: 50%;
+}
+
+.mainContent02 h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mainContent02 p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.mainContent02 .container {
+    gap: 30px;
+}
+
+.mainContent02 .container figure {
+    flex: 1;
+}
+
+.mainContent02 .container img {
+    margin: 0 0 10px 0;
+}
+
+.mainContent02 .container strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    letter-spacing: -0.025em;
+}
+
+.mainContent02 .container a {
+    display: inline-block;
+    padding: 3px 15px 5px 15px;
+    border: 1px solid #333;
+    font-size: 15px;
+    letter-spacing: -0.025em;
+}
+
+.mainContent02 {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.mainContent03 {
+    padding: 100px 0;
+    text-align: center;
+    background: #f1f1f1;
+}
+
+.mainContent03 h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mainContent03 p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.mainContent03 .container {
+    gap: 30px;
+}
+
+.mainContent03 .container figure {
+    flex: 1;
+}
+
+.mainContent03 .container img {
+    margin: 0 0 10px 0;
+}
+
+.mainContent03 .container strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    letter-spacing: -0.025em;
+}
+
+.mainContent03 .container a {
+    display: inline-block;
+    padding: 3px 15px 5px 15px;
+    border: 1px solid #333;
+    font-size: 15px;
+    letter-spacing: -0.025em;
+}
+
+.mainContent03 figure .box {
+    overflow: hidden;
+    margin: 0 0 10px 0;
+    transition: border-radius 0.5s 0.5s;
+}
+
+.mainContent03 figure img {
+    transition: 0.5s;
+}
+
+.mainContent03 figure:hover img {
+    transform: scale(1.3);
+}
+
+.mainContent03 figure:hover .box {
+    border-radius: 50%;
+}
+
+.mainContent04 {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.mainContent04 h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mainContent04 p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.mainContent04 .container {
+    gap: 30px;
+}
+
+.mainContent04 .container figure {
+    flex: 1;
+}
+
+.mainContent04 .container img {
+    margin: 0 0 10px 0;
+}
+
+.mainContent04 .container strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    letter-spacing: -0.025em;
+}
+
+.mainContent04 .container a {
+    display: inline-block;
+    padding: 3px 15px 5px 15px;
+    border: 1px solid #333;
+    font-size: 15px;
+    letter-spacing: -0.025em;
+}
+
+.mainContent04 figure .box {
+    overflow: hidden;
+    margin: 0 0 10px 0;
+    transition: 0.5s;
+}
+
+/* .mainContent04 figure:hover .box {
+    border-radius: 50%;
+    transform: rotate(-5deg);
+    transition: 0.5s 1s;
+
+} */
+
+.mainContent04 figure.on .box {
+    border-radius: 50%;
+    transform: rotate(10deg);
+}
+
+.mainContent04 figure.off .box {
+    border-radius: 50%;
+    transform: rotate(-10deg);
+}
+
+.fixedBg {
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/mainvisual01.jpg) no-repeat fixed center center/cover;
+    /* background-attachment: fixed; */
+    filter: grayscale(1);
+
+}
+
+.fixedBg h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.fixedBg p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.fixedBg i {
+    margin: auto auto auto 3px;
+    padding: 5px;
+    border-radius: 50%;
+    background: #333;
+    vertical-align: middle;
+    /* vertical-align: -20%; */
+}
+
+.service {
+    padding: 100px 0;
+}
+
+.service .container {
+    gap: 30px;
+}
+
+.service .container>div {
+    /* position: relative; */
+    flex: 1;
+    /* flex 박스들은 자동으로 widith가 비율에 맞춰 stetch 된다 */
+    /* padding-bottom: 56.25%; */
+}
+
+.service .container .case {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.service .container iframe {
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.service .container .root_daum_roughmap {
+    position: absolute;
+    inset: 0 0 0 0;
+    width: 100%;
+}
+
+.service .container .root_daum_roughmap .wrap_map {
+    height: 100%;
+}
+
+.youtube {
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    filter: grayscale(1);
+}
+
+.youtube h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.youtube p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.youtube i {
+    background: #333;
+    border-radius: 50%;
+    padding: 5px;
+    vertical-align: 0;
+
+}
+
+.scrollMe {
+    padding: 200px 0;
+}
+
+.scrollMe .container {
+    gap: 70px;
+}
+
+.scrollMe .container figure {
+    flex: 1;
+}
+
+.product {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.product h2 {
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.product h2::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50px;
+    background: #f00;
+    margin: 10px auto;
+}
+
+.product p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+    letter-spacing: -0.025em;
+}
+
+.product .productSlider figure {
+    padding: 0 15px;
+    font-size: 13px;
+}
+
+.product .productSlider figure.slick-center img {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.product .productSlider figure img {
+    transform: scale(1);
+}
+
+.product .productSlider .inbox {
+    margin: 0 0 10px 0;
+    overflow: hidden;
+}
+
+.product .productSlider strong {
+    display: block;
+    margin: 0 0 10px 0;
+}
+
+.product .productSlider a {
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 0 0 10px 0;
+    background: #333;
+    color: #fff;
+}
+
+.product .productSlider .slick-dots li {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.product .productSlider .slick-dots {
+    padding: 20px 0 0 0;
+}
+
+.product .productSlider .slick-dots li button {
+    border: none;
+    outline: none;
+    background: #f00;
+    padding: 0;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+    vertical-align: top;
+}
+
+.product .productSlider .slick-dots li.slick-active button {
+    background: #333;
+}
+
+.product .productArrows i {
+    position: absolute;
+    inset: calc(50% + 20px) auto auto 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+}
+
+.product .productArrows i:nth-child(1) {
+    margin: 0 0 0 -600px;
+}
+
+.product .productArrows i:nth-child(2) {
+    margin: 0 0 0 600px;
+}
+
+.serviceTab {
+    padding: 100px 0;
+    background: #f1f1f1;
+}
+
+.serviceTab .container {
+    gap: 30px;
+}
+
+.serviceTab .container>div {
+    flex: 1
+}
+
+.serviceTab .tabContent>div {
+    display: none;
+}
+
+.serviceTab .tabContent>div.on {
+    display: block;
+}
+
+.serviceTab .tabMenu {
+    display: flex;
+}
+
+.serviceTab .tabMenu li {
+    flex: 1;
+    background: #ddd;
+    color: #333;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.serviceTab .tabMenu li.on {
+    background: #000;
+    color: #fff;
+}
+
+.serviceTab .tabMenu li~li {
+    border-left: 1px solid #fff;
+}
+
+.serviceTab .tabMenu li a {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.tabContent .notice li {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 2.5;
+    border-bottom: 1px solid #777;
+}
+
+.tabContent .notice a {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tabContent .notice strong {
+    width: 450px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.rightContent li {
+    display: none;
+}
+
+.rightContent .inbox {
+    display: flex;
+    gap: 20px;
+}
+
+.rightContent .inbox .box {
+    flex: 1;
+}
+
+.rightContent .inbox .contents {
+    padding: 50px 0;
+}
+
+.rightContent .inbox .contents h2 {
+    margin: 0 0 10px 0;
+}
+
+.rightContent .inbox .contents p {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin: 0 0 30px 0;
+}
+
+.rightContent .inbox .contents a {
+    display: inline-block;
+    font-size: 14px;
+    /* font-weight: 300; */
+    /* letter-spacing: -0.025em; */
+    /* margin: 0 0 30px 0; */
+    padding: 3px 10px 5px 10px;
+    border: 1px solid #666;
+}
+
+.rightContent li.on {
+    display: block;
+}
+
+.toTop {
+    display: none;
+    position: fixed;
+    inset: auto 50px 50px auto;
+    z-index: 999;
+}
+
+.toTop i {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#footer {
+    background: #333;
+    color: #fff;
+    line-height: 80px;
+    font-size: 15px;
+}
+
+#footer .top {
+    border-bottom: 1px solid #666;
+}
+
+#footer .top dd,
+#footer .top dt {
+    display: inline-block;
+}
+
+#footer .top dd~dd::before,
+#footer .top dt::before {
+    content: "";
+    display: inline-block;
+    margin: 0 15px;
+    width: 1px;
+    height: 10px;
+    background: #ddd;
+}
+
+#footer .top i {
+    font-size: 25px;
+}
+
+#footer .container {
+    justify-content: space-between;
+}
+
+#footer .bottom address {
+    font-style: normal;
+}
+
+#footer .bottom select {
+    font-size: 12px;
+    text-transform: uppercase;
+    background: transparent;
+    color: #ddd;
+    padding: 5px 15px;
+    border: 1px solid #666
+}
+
+#footer .bottom option {
+    color: #fff;
+    background: #333;
+    /* jquery ui */
+}

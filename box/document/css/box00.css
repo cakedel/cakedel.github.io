@@ -1,0 +1,58 @@
+.basic01 {
+    padding: 100px 0;
+    background: blanchedalmond;
+    text-align: center;
+
+}
+
+.basic01 h2 {
+    font-size: 20px;
+    font-style: italic;
+    margin: 0 0 30px 0;
+    
+}
+
+.basic01 p {
+    font-size: 10px;
+    margin: 0 0 30px 0;
+}
+
+.basic01 .container {
+    display: flex;
+    gap : 10px;
+    width: 1200px;
+    margin: 0 auto;
+
+}
+.basic01 .container img {
+    width :100%
+}
+.basic02 h2 {
+    font-size: 20px;
+    font-style: italic;
+    margin: 0 0 30px 0;
+}
+.basic01 figure {
+    flex: 1;
+}
+.basic02 p {
+    font-size: 10px;
+    margin: 0 0 30px 0;
+}
+.basic02 {
+    padding: 100px 0;
+    background: rgb(255, 222, 222);
+    text-align: center;
+}
+.basic02 .container {
+    display: flex;
+    gap: 10px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.basic02 .container img {
+    width: 100%;
+}
+.basic02 figure{
+    flex: 1;
+}

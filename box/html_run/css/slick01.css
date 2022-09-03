@@ -1,0 +1,142 @@
+.main {
+    position: relative;
+}
+
+.main .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+
+}
+
+.slogan h2 {
+    font-size: 37px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.slogan p {
+    font-size: 17px;
+}
+
+.main .slick-dots {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main .slick-dots li {
+    display: inline-block;
+    width: 100px;
+    height: 6px;
+    background: #333;
+    margin: 0 2px;
+
+}
+
+.main .slick-dots li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #f00;
+}
+
+.main .slick-dots li.slick-active::after {
+    width: 100%;
+    transition: 3s;
+}
+
+.main .slick-dots button {
+    display: none;
+}
+
+.main .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    font-size: 0;
+    border: none;
+    background: transparent;
+    width: 100px;
+    height: 100px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    opacity: 0.3;
+}
+
+.main .slick-arrow:hover {
+    opacity: 1;
+    transition: border 0.5s;
+}
+
+.main .slick-prev {
+    margin: 0 0 0 -700px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    /* 속성을 두번 쓰면 뒤에 쓴 속성이 앞에 쓴 속성을 덮어쓴다. */
+
+}
+
+.main .slick-next {
+    margin: 0 0 0 700px;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.main .wheel {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-weight: 300;
+    width: 30px;
+    height: 55px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    font-size: 0;
+}
+
+.main .wheel span {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 12px;
+    background: #fff;
+    border-radius: 1px;
+    animation: wheel 0.5s infinite;
+}
+
+@keyframes wheel {
+    to {
+        top: 20%;
+    }
+}
+
+.visual_slider figure {
+    height: 600px;
+}
+
+.visual_slider .item01 {
+    background: url(../img/mainvisual01.jpg) no-repeat center center/cover;
+    /* XY축 center 꽉 채우기 */
+}
+
+.visual_slider .item02 {
+    background: url(../img/mainvisual02.jpg) no-repeat center center/cover;
+}
+
+.visual_slider .item03 {
+    background: url(../img/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+img {
+    max-width: 100%;
+}

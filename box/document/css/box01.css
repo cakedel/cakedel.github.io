@@ -1,0 +1,27 @@
+body    {
+    margin:0 0 0 0;
+}
+
+h1  {color:red}
+.box00 {
+    width: 1200px;
+    margin: 0 auto;
+    background-color:black;
+    color:white;
+}
+
+.box01 {
+    width: 50%;
+    background: red;
+}
+
+.box02  {
+    margin-left: 100px;
+    width: 100%;
+    background: yellow
+}
+.box03   {
+    margin-left: 100px;
+    width:auto;
+    background: yellowgreen;
+}

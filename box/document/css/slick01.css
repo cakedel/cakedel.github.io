@@ -1,0 +1,143 @@
+.main_visual {
+
+}
+
+.main_visual .main_slider {
+
+}
+
+.main_visual .main_slider figure {
+    position: relative;
+    height: 600px;
+}
+
+.main_visual .main_slider .item01 {
+    background: url(../img/mainvisual01.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slider .item02 {
+    background: url(../img/mainvisual02.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slider .item03 {
+    background: url(../img/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    width: 100px;
+    height: 100px;
+    font-size: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-left: 1px solid #fff;
+    border-top:  1px solid #fff;
+}
+
+.main_visual .main_slider .slick-prev {
+    margin: 0 0 0 -700px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.main_visual .main_slider .slick-next {
+    margin: 0 0 0 700px;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.main_visual .main_slider .slick-dots {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main_visual .main_slider .slick-dots li {
+    display: inline-block;
+    width: 80px;
+    height: 5px;
+    background: #333;
+    margin: 0 3px;
+}
+
+.main_visual .main_slider .slick-dots li.slick-active {
+    background: #f00;
+}
+
+.main_visual .main_slider .slick-dots button {
+    display: none;
+}
+
+.main_visual .main_slider .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+}
+
+.main_visual .main_slider .inner h3 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+
+}
+
+.main_visual .main_slider .inner p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+    line-height: 1.4;
+
+}
+
+.main_visual .main_slider .inner a {
+    display: inline-block;
+    padding: 5px 30px 8px 30px;
+    background: #333;
+    border: 1px solid #fff;
+}
+
+.main_visual .main_slider .inner a:hover {
+    background: #fff;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.main_visual .main_slider figure h3 {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.main_visual .main_slider figure.on h3 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.main_visual .main_slider figure p {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.main_visual .main_slider figure.on p {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 0.5s;
+}
+.main_visual .main_slider figure a {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.main_visual .main_slider figure.on a {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 1s;
+    transition-property: transform, opacity;
+}

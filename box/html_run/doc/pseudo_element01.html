@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소 선택자 01</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        section {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        section:nth-child(odd) {
+            /* nth-child 중의 홀수의 색깔을 바꾼다. */
+            /* 짝수는 even */
+            background: #f9f9f9;
+        }
+
+        section .container {
+            display: flex;
+            gap: 30px;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        section .container figure {
+            flex: 1;
+        }
+
+        section .container img {
+            max-width: 100%;
+        }
+
+        section h2 {
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            margin: 0 0 10px 0;
+        }
+
+        section p {
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: -0.025em;
+            margin: 0 0 30px 0;
+        }
+
+        .psd01 h2::before {
+            content: "앞";
+        }
+
+        .psd01 h2::after {
+            content: "뒤";
+        }
+
+        .psd02 h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 1px;
+            background: #f00;
+            margin: 20px auto;
+        }
+
+        .psd03 h2::before {
+            content: "";
+            display: inline-block;
+            /* block은 옆에 누가 오는걸 싫어해 */
+            width: 80px;
+            height: 1px;
+            background: #f00;
+            vertical-align: middle;
+            /* inline 요소이기 때문에 */
+            margin: -5px 10px 0 0;
+        }
+
+        .psd03 h2::after {
+            content: "";
+            display: inline-block;
+            /* block은 옆에 누가 오는걸 싫어해 */
+            width: 80px;
+            height: 1px;
+            background: #f00;
+            vertical-align: middle;
+            /* inline 요소이기 때문에 */
+            margin: -5px 0 0 10px;
+        }
+
+        .psd04 h2::after {
+            content: "\e907";
+            font-family: xeicon;
+            /* https://younghunkimm.github.io/xeicode/ */
+        }
+
+        .psd04 figure::after {
+            content: "\ea12";
+            font-family: xeicon;
+        }
+
+        .dot_list {
+            width: 300px;
+        }
+
+        .dot_list li {
+            position: relative;
+            text-align: left;
+            padding: 0 0 0 20px;
+            line-height: 1.2;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dot_list li::before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            background: #f00;
+            border-radius: 50%;
+        }
+
+        .psd05 h2::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: #369;
+            margin: 20px auto;
+            border-radius: 50% 0;
+            transform: rotate(15deg);
+        }
+
+        .psd05 figure {
+            position: relative;
+        }
+
+        .psd05 figure:hover::after {
+            transform: rotateX(720deg);
+        }
+
+        .psd05 figure::after {
+            content: attr(data-num);
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            background: #f00;
+            padding: 30px;
+            font-size: 30px;
+            color: #fff;
+            border-radius: 50%;
+            transition: 1s;
+        }
+
+        hr.list_hr {
+            position: relative;
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 50px 0;
+            overflow: visible;
+        }
+
+        hr.list_hr::after {
+            content: "\e907";
+            font-family: xeicon;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            background: #f7f7f7;
+            padding: 20px;
+            font-size: 20px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="psd01">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ullam, cupiditate officia explicabo
+            necessitatibus esse beatae dignissimos excepturi enim?</p>
+        <div class="container">
+            <figure>
+                <img src="../img/lesedilarona01.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="../img/lesedilarona02.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="../img/lesedilarona03.jpg" alt="">
+            </figure>
+        </div>
+    </section>
+    <section class="psd02">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ullam, cupiditate officia explicabo
+            necessitatibus esse beatae dignissimos excepturi enim?</p>
+        <div class="container">
+            <figure>
+                <img src="../img/lesedilarona01.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="../img/lesedilarona02.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="../img/lesedilarona03.jpg" alt="">
+            </figure>
+        </div>
+    </section>
+    <section class="psd03">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ullam, cupiditate officia explicabo
+            necessitatibus esse beatae dignissimos excepturi enim?</p>
+        <div class="container">
+            <figure>
+                <img src="../img/lesedilarona01.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="../img/lesedilarona02.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="../img/lesedilarona03.jpg" alt="">
+            </figure>
+        </div>
+    </section>
+    <section class="psd04">
+        <h2><i class="xi-arrow-right"></i>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ullam, cupiditate officia explicabo
+            necessitatibus esse beatae dignissimos excepturi enim?</p>
+        <div class="container">
+            <figure>
+                <img src="../img/lesedilarona01.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="../img/lesedilarona02.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="../img/lesedilarona03.jpg" alt="">
+            </figure>
+        </div>
+    </section>
+    <section class="psd04">
+        <h2><i class="xi-arrow-right"></i>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ullam, cupiditate officia explicabo
+            necessitatibus esse beatae dignissimos excepturi enim?</p>
+        <div class="container">
+            <ul class="dot_list">
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+        </div>
+    </section>
+    <section class="psd05">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ullam, cupiditate officia explicabo
+            necessitatibus esse beatae dignissimos excepturi enim?</p>
+        <div class="container">
+            <figure data-num="01">
+                <img src="../img/lesedilarona01.jpg" alt="">
+            </figure>
+            <figure data-num="02">
+                <img src="../img/lesedilarona02.jpg" alt="">
+            </figure>
+            <figure data-num="03">
+                <img src="../img/lesedilarona03.jpg" alt="">
+            </figure>
+        </div>
+    </section>
+    <section class="psd06">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ullam, cupiditate officia explicabo
+            necessitatibus esse beatae dignissimos excepturi enim?</p>
+        <hr class="list_hr">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ullam, cupiditate officia explicabo
+            necessitatibus esse beatae dignissimos excepturi enim?</p>
+        <div class="container">
+            <figure data-num="01">
+                <img src="../img/lesedilarona01.jpg" alt="">
+            </figure>
+            <figure data-num="02">
+                <img src="../img/lesedilarona02.jpg" alt="">
+            </figure>
+            <figure data-num="03">
+                <img src="../img/lesedilarona03.jpg" alt="">
+            </figure>
+        </div>
+    </section>
+</body>
+
+</html>

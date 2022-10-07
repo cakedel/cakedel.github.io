@@ -34,7 +34,7 @@ const Modify = ({ list, setList }) => {
         : it
     );
     setList(modify);
-    GO("/view/" + view.id);
+    GO("/Board");
   };
   return (
     <div>

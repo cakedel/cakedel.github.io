@@ -6,6 +6,8 @@ const Modify = ({ list, setList }) => {
   const { id } = useParams();
   const view = list.find((el) => String(el.id) === id);
   const [input, setInput] = useState({
+    id: view.id,
+    // 뭐든 객체나 배열을 건드리려면 id값이 중요하다. 받아오는 것 잊지말기.
     name: view.name,
     title: view.title,
     content: view.content,
@@ -34,7 +36,7 @@ const Modify = ({ list, setList }) => {
         : it
     );
     setList(modify);
-    GO("/Board");
+    GO("/View/" + view.id);
   };
   return (
     <div>

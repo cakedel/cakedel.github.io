@@ -1,44 +1,64 @@
 import React, { useRef, useState } from "react";
+import { Link, Route, Routes } from "react-router-dom";
+import List from "./components/List";
+import Modify from "./components/Modify";
+import View from "./components/View";
+import Write from "./components/Write";
 
 function App() {
   const [input, setInput] = useState({});
   const [list, setList] = useState([]);
   const num = useRef(1);
-  const inputHandler = (e) => {
-    setInput({ ...input, [e.target.name]: e.target.value, id: num.current });
-  };
-  const submitTodo = () => {
-    setList([...list, input]);
-    console.log(list);
-    num.current++;
-    setInput({ ...input, title: "" });
-  };
-  const delTodo = (el) => {
-    setList(list.filter((it) => it.id !== el.id));
-    console.log(list);
-    console.log();
-    console.log();
-  };
+
   return (
     <div className="App">
       <h2>Today's List</h2>
       <ul>
-        {list.map((el, idx) => {
-          return (
-            <li key={el.id}>
-              {el.title}
-              <button onClick={() => delTodo(el)}>DELETE</button>
-            </li>
-          );
-        })}
+        <Link to="/">
+          <li>HOME</li>
+        </Link>
+        <Link to="/board">
+          <li>BOARD</li>
+        </Link>
+        <Link to="/view">
+          <li>VIEW</li>
+        </Link>
+        <Link to="/write">
+          <li>WRITE</li>
+        </Link>
       </ul>
-      <input
-        type="text"
-        name="title"
-        onChange={inputHandler}
-        value={input.title}
-      />
-      <button onClick={submitTodo}>SUBMIT</button>
+      <Routes>
+        <Route path="/" />
+        <Route path="/board" element={<List list={list} />} />
+        <Route
+          path="/view/:id"
+          element={<View list={list} setList={setList} />}
+        />
+        <Route
+          path="/modify/:id"
+          element={
+            <Modify
+              input={input}
+              setInput={setInput}
+              list={list}
+              setList={setList}
+              num={num}
+            />
+          }
+        />
+        <Route
+          path="/write"
+          element={
+            <Write
+              input={input}
+              setInput={setInput}
+              list={list}
+              setList={setList}
+              num={num}
+            />
+          }
+        />
+      </Routes>
     </div>
   );
 }

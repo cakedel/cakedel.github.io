@@ -458,3 +458,71 @@ body {
 .MainVisual .slide_handler button:last-child {
     margin: 0 0 0 800px;
 }
+
+.MainContent {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.MainContent h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+}
+
+.MainContent>p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 40px 0;
+}
+
+.MainContent .inner figure {
+    float: left;
+    width: calc(100% / 3);
+}
+
+.MainContent .inner .thumb {
+    overflow: hidden;
+    margin: 0 0 40px 0;
+}
+
+.MainContent .inner figure img {
+    transition: 0.4s;
+}
+
+.MainContent .inner figure:hover img {
+    transform: scale(1.2);
+}
+
+.MainContent .inner .des {
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+
+.MainContent .inner .des::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 40px;
+    background: #008850;
+}
+
+.MainContent .inner p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.45;
+    margin: 0 0 20px 0;
+}
+
+.MainContent .inner a {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 1px solid #008850;
+    color: #008850;
+    font-size: 13px;
+}

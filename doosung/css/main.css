@@ -1,0 +1,138 @@
+/* * { border: 1px solid #f00; } */
+.Wrap { } 
+
+.container { display: flex; width: 1170px; margin: 0 auto; } 
+.inner { width: 1170px; margin: 0 auto; } 
+.discover { font-family: 'Red Hat Display', sans-serif; } 
+.discover i { vertical-align: middle; } 
+
+header { line-height: 100px; } 
+header .container { justify-content: space-between; border-bottom: 2px solid #999; } 
+header h1 { font-size: 0; } 
+
+.gnb>ul { display: flex; gap: 40px; font-family: 'Red Hat Display', sans-serif; font-weight: 500; } 
+
+header .icon { display: flex; gap:10px; } 
+header .icon a { display: block; font-size: 25px; } 
+
+.mainVisual .top { padding: 50px 0; } 
+.mainVisual .top h2 { font-size: 35px; font-weight: 500; line-height: 1.45; } 
+.mainVisual .bottom { position: relative; padding: 250px 0; background: url(../img/nature.jpg) no-repeat center center/cover; } 
+.mainVisual .bottom .inner { position: absolute; bottom: -5.5%; left: 50%; transform: translateX(-50%); } 
+.mainVisual .bottom p { font-family: 'Red Hat Display', sans-serif; font-size: 98px; font-weight: 900; color: #fff; text-align: center; } 
+
+.nature { padding: 100px 0; } 
+.nature .container { gap: 70px; } 
+.nature .top figure { width: calc((100% - 70px) / 2); background: url(../img/history_img-02.png) no-repeat center center/cover; } 
+.nature .inbox { padding: 100px 0; } 
+.nature .top { justify-content: space-between; margin: 0 0 70px 0; } 
+.nature .top .inbox { text-align: right; } 
+.nature .top h2 { font-size: 30px; font-weight: 500; margin: 0 0 30px 0; } 
+.nature .top h2::after { content: ""; display: block; background: #666; height: 2px; width: 70px; margin: 20px 0 auto auto; } 
+.nature .top p { font-size: 17px; } 
+
+
+.nature .bottom { justify-content: space-between; } 
+.nature .bottom figure { width: calc((100% - 70px) / 2);; background: url(../img/history_img-01.png) no-repeat center center/cover; } 
+.nature .bottom h2 { font-size: 30px; font-weight: 500; margin: 0 0 30px 0; } 
+.nature .bottom h2::after { content: ""; display: block; background: #666; height: 2px; width: 70px; margin: 20px auto auto 0; } 
+.nature .bottom p { font-size: 18px; } 
+
+.product { padding: 100px 0; background: #000; } 
+.product .WrapperBox { width: calc(1170px + (100% - 1170px) / 2); margin: auto 0 auto auto; display: flex; gap: 100px; } 
+.product .left { display: flex; flex-direction: column; gap: 30px; } 
+.product .left h2 { font-family: 'Red Hat Display', sans-serif; font-size: 40px; font-weight: 300; color: #fff; margin: 0 0 30px 0; } 
+
+.product .right { min-width: 0; } 
+
+.product .inbox { padding: 30px 20px; background: #fff; } 
+.product .inbox strong { display: block; font-size: 20px; font-weight: 500; margin: 0 0 20px 0; } 
+
+.product .arrows { display: flex; gap: 20px; transform: translateY(-10px); } 
+.product .arrows i { color: rgba(255, 255, 255, 0.6); font-size: 40px; cursor: pointer; } 
+
+.product .swiper { padding-bottom: 30px; } 
+.product .swiper-scrollbar-drag { background: rgba(255, 255, 255, 0.6); } 
+.product .swiper-scrollbar { background: rgba(255, 255, 255, 0.3); width: 85%; left: auto; right: 3%; } 
+
+
+
+
+.floor { padding: 100px 0; } 
+.floor .floorWrapper { display: flex; gap: 70px; width: calc(1170px + (100% - 1170px) / 2 ); margin: auto auto auto 0; } 
+.floor .right { min-width: 0; flex: 4; } 
+.floor .left { min-width: 0; flex: 7; } 
+.floor .inbox { text-align: right; } 
+.floor h2 { padding:30px 0 0 0; font-size: 35px; font-weight: 500; } 
+.floor h2::after { content: ""; display: block; background: #666; width: 70px; height: 2px; margin:20px 0 20px auto; } 
+.floor .tit { font-size: 25px; font-weight: 100; margin: 0 0 30px 0; } 
+
+.floor h3 { font-family: 'Red Hat Display', sans-serif; font-size: 90px; font-weight: 700; margin: 0 0 10px 0; } 
+
+.floorExplain p { margin: 0 0 70px 0; min-width: 0; font-size: 18px; } 
+.floorExplain .swiper-slide { background: #fff; } 
+
+.floor .right { display: flex; flex-direction: column; gap: 30px; justify-content: space-between; } 
+.floor .floorImageSlider { min-width: 0; flex: 9; } 
+.floor .arrows { flex: 1; } 
+
+.floorImageSlider .swiper { width: 100%; height: 100%; } 
+
+.floorImageSlider .itm01 { background: url(../img/floor01.jpg) no-repeat center center/cover; } 
+.floorImageSlider .itm02 { background: url(../img/floor02.jpg) no-repeat center center/cover; } 
+.floorImageSlider .itm03 { background: url(../img/floor03.jpg) no-repeat center center/cover; } 
+.floorImageSlider .itm04 { background: url(../img/floor04.jpg) no-repeat center center/cover; } 
+.floorImageSlider .itm05 { background: url(../img/floor05.jpg) no-repeat center center/cover; } 
+
+
+.floor .arrows { flex: 1; font-size: 50px; color: rgba(0, 0, 0, 0.3); cursor: pointer; } 
+.floor .arrows i { vertical-align: bottom; } 
+
+.service { padding: 100px 0; background: linear-gradient( #000 70%, #fff 30%); } 
+.service .top { color: #fff; } 
+.service .top h2 { font-size: 35px; font-weight: 500; } 
+.service .top h2::after { content: ""; display: block; background: #ddd; width: 70px; height: 2px; margin: 20px 0 10px 0; } 
+.service .top p { margin: 0 0 50px 0; font-weight: 300; } 
+
+.service .bottom { display: flex; gap: 30px; } 
+.service .inbox { background: #fff; width:100%; } 
+.service .menu { padding: 50px; box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1); } 
+.service .menu img { width: 50px; margin: 0 0 50px 0; } 
+.service .menu p { font-weight: 500; font-size: 20px; margin: 0 0 30px; } 
+
+.eco { padding: 50px 0 150px 0; } 
+.eco h2 { font-family: 'Red Hat Display', sans-serif; font-size: 40px; font-weight: 400; text-align: center; margin: 0 0 50px 0; } 
+.eco .container { gap: 30px; } 
+.eco .container img { margin: 0 0 30px 0; } 
+.eco h3 { font-size: 24px; font-weight: 500; text-align: center; } 
+
+.propaper { padding: 100px 0; background: url(../img/bg.png) no-repeat center center/cover; color: #fff; } 
+.propaper .container { gap: 30px; justify-content: space-between; } 
+.propaper h2 { font-family: 'Red Hat Display', sans-serif; font-size: 30px; font-weight: 100; margin: 0 0 30px 0; } 
+.propaper .left { flex: 5; } 
+.propaper .left p { font-size: 17px; font-weight: 300; } 
+.propaper .left .pTop { margin: 0 0 10px 0; } 
+.propaper .left .pBottom { margin: 0 0 50px 0; } 
+.propaper .left strong { font-size: 20px; font-weight: 500; } 
+
+.propaper .right { display: flex; gap: 30px; flex: 7; } 
+.propaper .right a { display: block; width: 100%; height: 100%; background: #000; flex: 1; } 
+.propaper .inbox { padding: 50px 50px; text-align: center; } 
+.propaper .inbox h3 { font-family: 'Red Hat Display', sans-serif; font-size: 30px; font-weight: 100; } 
+.propaper .inbox h3::after { content: ""; display: block; width: 50px; height: 1px; background: #ddd; margin: 10px auto; } 
+.propaper .right a { display: block; } 
+
+footer { padding: 30px 0; background: #000; color: #fff; } 
+footer .top { justify-content: space-between; line-height: 120px; border-bottom: 1px solid #999; } 
+footer .fMenu { display: flex; gap: 40px; font-family: 'Red Hat Display', sans-serif; font-size: 20px; font-weight: 100; } 
+footer .middle { display: flex; flex-direction: column; gap: 50px; padding: 50px 0; border-bottom: 1px solid #999; } 
+footer .address { display: flex; } 
+footer .address dt { font-size: 20px; font-weight: 500; flex: 2; } 
+footer .info { flex: 8; } 
+footer .number { display: flex; color: #999; line-height: 1.45; } 
+footer .number li~li::before { content: ""; display: inline-block; width: 1px; height: 12px; background: #666; margin: 0 10px; } 
+footer address { display: block; color: #999; } 
+
+footer .bottom { padding: 30px 0; color: #777; font-size: 14px; } 
+footer .bottom ul { display: flex; margin: 0 0 10px 0; } 
+footer .bottom li~li::before { content:""; display: inline-block; width: 1px; height: 10px; background: #555; margin: 0 5px; } 
